@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    /* border: 5px double black; */
+    justify-content: center;
+    animation: developers 800ms ease-in;
+    
+}
+.row {
+    display: flex;
+    
+}
+
+.card {
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 15%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+ 
+img {
+    display: flex;
+    vertical-align: middle;
+    height: auto ;
+    width: 100% ;
+    object-fit: contain;
+      
+  }
+
+@keyframes developers{
+
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.info {
+    margin: 15px;
+}
