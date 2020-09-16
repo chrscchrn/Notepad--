@@ -3,8 +3,12 @@ const path = require("path");
 
 module.exports = (app) => {
     app.get("/main", (req, res) => {
-        res.sendFile(path.join(__dirname + "../public/main.html"))
+        res.sendFile(path.join(__dirname, "../public/main.html"))
     })
+    
+    // app.get("/search", function(req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/search.html"));
+    // });
 
     // app.get("/browse", function(req, res) {
     //     res.sendFile(path.join(__dirname, "../public/browse.html"));
@@ -18,8 +22,5 @@ module.exports = (app) => {
         res.sendFile(path.join(__dirname, "../public/signup.html"));
     });
 
-    // app.get("/search", function(req, res) {
-    //     res.sendFile(path.join(__dirname, "../public/index.html"));
-    // });
-
+    
 }
