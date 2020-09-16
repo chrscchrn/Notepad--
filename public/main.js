@@ -6,29 +6,38 @@ $(document).ready(() => {
     }).then(res => {
         $("#api-response").text(JSON.stringify(res))
     })
+
+    $.ajax({
+        url: "/browse",
+        method: "GET"
+    }).then(res => {
+        $("#api-response").text(JSON.stringify(res))
+    })
+
+
+    $.ajax({
+        url: "/login",
+        method: "GET"
+    }).then(res => {
+        $("#api-response").text(JSON.stringify(res))
+    })
+
+    $.ajax({
+        url: "/signup",
+        method: "GET"
+    }).then(res => {
+        $("#api-response").text(JSON.stringify(res))
+    })
+
+    $.ajax({
+        url: "/search",
+        method: "GET"
+    }).then(res => {
+        $("#api-response").text(JSON.stringify(res))
+    })
 })
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../landing.html"));
-  });
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../login.html"));
-  });
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../main.html"));
-  });
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../index.html"));
-  });
-
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../main.html"));
-  });
-
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../gio/about.html"));
-  });
 
