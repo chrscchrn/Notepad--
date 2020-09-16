@@ -2,11 +2,9 @@
 const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
-
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
-
 // Creating express app and configuring middleware needed for authentication
 const app = express();
 app.use(express.urlencoded({ extended: true }));
