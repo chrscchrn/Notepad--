@@ -1,3 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    /* border: 5px double black; */
+    justify-content: center;
+    animation: developers 800ms ease-in;
+    
+}
+.row {
+    display: flex;
+    
+}
+
+.card {
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 15%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+ 
+img {
+    display: flex;
+    vertical-align: middle;
+    height: auto ;
+    width: 100% ;
+    object-fit: contain;
+      
+  }
+
+@keyframes developers{
+
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.info {
+    margin: 15px;
+}
 html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
 table { border-collapse: collapse; border-spacing: 0; }
 th, td { text-align: left; vertical-align: top; }
@@ -79,3 +124,36 @@ footer {
     height: 100%;
     width: 100%;
 }
+
+ #content {
+    --borderWidth: 3px;
+    background: #f4f6f7;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  #content:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
