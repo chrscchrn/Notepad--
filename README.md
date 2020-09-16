@@ -35,7 +35,7 @@ MVP-Uno: Bring in articles from News API and show the in the front page. User ca
 
 ## Installation
 
-# npm install newsapi
+ - npm install newsapi
 
 # projectDos
 
