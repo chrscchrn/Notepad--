@@ -1,0 +1,51 @@
+.container {
+    margin-top: 500px;
+    display: flex;
+    flex-direction: row;
+    /* border: 5px double black; */
+    justify-content: center;
+    animation: developers 800ms ease-in;
+    
+}
+.row {
+    display: flex;
+    
+}
+h1 {
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    font-family: 'Montserrat';
+  }
+.card {
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 15%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+ 
+.card img {
+    display: flex;
+    vertical-align: middle;
+    height: auto ;
+    width: 100% ;
+    object-fit: contain;
+      
+  }
+
+@keyframes developers{
+
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.info {
+    margin: 15px;
+}
