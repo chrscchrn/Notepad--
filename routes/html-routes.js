@@ -6,13 +6,17 @@ module.exports = (app) => {
         res.sendFile(path.join(__dirname, "../public/main.html"))
     })
     
-    // app.get("/search", function(req, res) {
-    //     res.sendFile(path.join(__dirname, "../public/search.html"));
-    // });
+    app.get("/search", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/search.html"));
+    });
 
-    // app.get("/browse", function(req, res) {
-    //     res.sendFile(path.join(__dirname, "../public/browse.html"));
-    // });
+    app.get("/browse", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/browse.html"));
+    });
+
+    app.get("/notes", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/notes.html"));
+    });
 
     app.get("/login", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/login.html"));
