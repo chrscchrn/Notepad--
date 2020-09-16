@@ -7,22 +7,19 @@ module.exports = (app) => {
     })
 }
 
-app.get("/", function(req, res) {
+app.get("/browse", function(req, res) {
     res.sendFile(path.join(__dirname, "../landing.html"));
   });
 
-app.get("/", function(req, res) {
+app.get("/login", function(req, res) {
     res.sendFile(path.join(__dirname, "../login.html"));
   });
 
-app.get("/", function(req, res) {
+app.get("/signup", function(req, res) {
     res.sendFile(path.join(__dirname, "../main.html"));
   });
 
-app.get("/", function(req, res) {
+app.get("/search", function(req, res) {
     res.sendFile(path.join(__dirname, "../index.html"));
   });
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../gio/about.html"));
-  });

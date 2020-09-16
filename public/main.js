@@ -1,4 +1,3 @@
-
 $(document).ready(() => {
     $.ajax({
         url: "/api/news/latest",
