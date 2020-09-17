@@ -3,12 +3,23 @@
 
 .row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-start;
     
+}
+.note-article {
+  height: 100px;
+  width: 800px;
+  background: rgb(238, 236, 236);
+  
+}
+.row-notes {
+  display: flex;
+    flex-direction: column;
 }
 .notes {
        margin: 15px;
-       width: 100%;
+       width: 800px;
 }
 .note-title {
   display: flex;
@@ -36,7 +47,11 @@
   }
   
 
-
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
 
 .about {
@@ -92,7 +107,7 @@ a {
   background: rgb(238, 236, 236);
   position: relative;
   border-radius: var(--borderWidth);
-  animation: developers 3000ms ease-in;
+  animation: developers 2000ms ease-in;
 }
 
 @keyframes developers{
@@ -100,9 +115,9 @@ a {
   0% {
       transform: translateX(200%);
   }
-  60% {
+  /* 60% {
     transform: rotate3d(2, -1, -1, -0.3turn);
-  }
+  } */
   /* 90% {
     transform: rotate(-40deg);
   } */
