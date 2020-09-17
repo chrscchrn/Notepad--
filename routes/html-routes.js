@@ -21,6 +21,11 @@ module.exports = (app) => {
             data: "hello work"
         })
     });
+    app.get("/about", (req, res) => {
+        res.render("about", {
+            data: "hello about"
+        })
+    });
     
     app.get("/", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/login.html"))
