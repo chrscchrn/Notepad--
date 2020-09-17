@@ -15,7 +15,7 @@ module.exports = (app) => {
             email: req.body.email,
             password: req.body.password
         }).then(() => {
-            res.redirect(307, "/api/login");
+                res.redirect(307, "/api/login");
         }).catch(err => {
             res.status(401).json(err);
         });
@@ -45,34 +45,11 @@ module.exports = (app) => {
 
     //need to create an article ID system, maybe save the article url in sequelize
     app.post("/api/notes", (req, res) => {
-        db.Note.create({
+        db.Note.create({ 
             title: req.body.title,
             body: req.body.body
         }).then((dbNote) => {
             res.json(dbNote);
         });
     });
-    app.get("/api/all", (req, res) => {
-        db.User.find().then(results => {
-            res.json({ data: results })
-        })
-    })
 }
-app.get("/api/notes/:id?", (req, res) => {
-    //This will be a databse request to get all the difference notes and articles we saved. 
-    if (req.params.id) {
-        db.Note.findById(req.params.id).then(result => {
-            res.json({ data: result })
-        })
-    }
-    db.Note.findAll().then(result => {
-        res.json({ data: result })
-    })
-});
-
-app.post("/api/notes", (req, res) => {
-    db.Note.create(req.body).then(result => {
-        res.json({ data: result })
-    })
-})
-
