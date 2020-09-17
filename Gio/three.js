@@ -21,10 +21,10 @@ var mouse = new THREE.Vector2();
 
 var geometry = new THREE.BoxGeometry(1, 1, 1);
 // var material = new THREE.MeshLambertMaterial({color: 0xF7F7F7});
-//var mesh = new THREE.Mesh(geometry, material);
+// var mesh = new THREE.Mesh(geometry, material);
 
 //scene.add(mesh);
-const texture = new THREE.TextureLoader().load('images/grumpycat2.jpg')
+const texture = new THREE.TextureLoader().load('Gio/images/grumpycat2.jpg')
 const material = new THREE.MeshBasicMaterial({ map: texture})
 meshX = -5;
 for(var i = 0; i<15;i++) {
