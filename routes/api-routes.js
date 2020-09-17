@@ -58,17 +58,17 @@ module.exports = (app) => {
         })
     })
 }
-app.get("/api/notes/:id?", (req, res) => {
-    //This will be a databse request to get all the difference notes and articles we saved. 
-    if (req.params.id) {
-        db.Note.findById(req.params.id).then(result => {
-            res.json({ data: result })
-        })
-    }
-    db.Note.findAll().then(result => {
-        res.json({ data: result })
-    })
-});
+// app.get("/api/notes/:id?", (req, res) => {
+//     //This will be a databse request to get all the difference notes and articles we saved. 
+//     if (req.params.id) {
+//         db.Note.findById(req.params.id).then(result => {
+//             res.json({ data: result })
+//         })
+//     }
+//     db.Note.findAll().then(result => {
+//         res.json({ data: result })
+//     })
+// });
 
 app.post("/api/notes", (req, res) => {
     db.Note.create(req.body).then(result => {
