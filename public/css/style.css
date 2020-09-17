@@ -74,6 +74,7 @@ body {
 footer {
     grid-area: footer;
     align-self: end;
+    margin: auto;
 }
 
 #title {
