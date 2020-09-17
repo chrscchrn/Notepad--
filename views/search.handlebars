@@ -6,4 +6,10 @@
     Search for Articles
 </button>
 
+<ul>
+    {{#each data}}
+        {{> article-search}}
+    {{/each}}
+</ul>
+
 <script type="text/javascript" src="/js/search.js"></script>
