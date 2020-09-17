@@ -17,7 +17,8 @@ app.use(
 
 // Requiring our routes
 require("./routes/api-routes.js")(app);
-require("./routes/html-routes")(app)
+require("./routes/html-routes.js")(app)
+require("./routes/notes-api-routes.js")(app)
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {
