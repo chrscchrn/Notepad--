@@ -20,6 +20,7 @@ function axiosTest() {
         axiosTest()
             .then(data => {
                 console.log(data.data.articles);
+                $("#results").text(data.data.articles[0].title);
             })   
         
     });
