@@ -36,4 +36,14 @@ module.exports = (app) => {
             });
         }
     });
+
+    app.post("/api/notes", (req, res) => {
+        console.log(req.body, "api-routes post is working"); //Its not working... :(
+        db.Note.create({ 
+            title: req.body.title,
+            body: req.body.body
+        }).then(function(dbNote) {
+            res.json(dbNote);
+        });
+    });
 }
