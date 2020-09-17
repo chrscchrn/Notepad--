@@ -25,7 +25,7 @@ Back-End
 MVP-Uno: Bring in articles from News API and show the in the front page. User can also select articles based on search, most popular, certain indutry. Once article is picked, allow user to take notes while reading. Save notes to SQL. Make everything load when it refreshes.
 
 ## Technologies Used
- - News API
+ - News API lib
  - Jquery
  - Node.js
  - Express.js & handlebars
