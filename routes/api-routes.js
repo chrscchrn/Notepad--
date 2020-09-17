@@ -37,11 +37,7 @@ module.exports = (app) => {
         }
     });
 
-    app.get("/api/notes", (req, res) => {
-        db.Note.findAll({}).then(notes => {
-            res.json(notes);
-        });
-    });
+
 
     //need to create an article ID system, maybe save the article url in sequelize
     app.post("/api/notes", (req, res) => {

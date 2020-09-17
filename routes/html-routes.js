@@ -1,4 +1,5 @@
 const path = require("path");
+const db = require("../models")
 
 
 
@@ -9,10 +10,12 @@ module.exports = (app) => {
             data: "hello search"
         })
     });
-    
+
     app.get("/notes", (req, res) => {
-        res.render("notes", {
-            data: "hello notes"
+        db.Note.findAll({}).then(notes => {
+            res.render("notes", {
+                data: notes
+            })
         })
     });
 
@@ -21,17 +24,17 @@ module.exports = (app) => {
             data: "hello work"
         })
     });
-    
+
     app.get("/", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/login.html"))
     })
 
-    app.get("/login", function(req, res) {
+    app.get("/login", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/login.html"));
     });
 
-    app.get("/signup", function(req, res) {
+    app.get("/signup", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/signup.html"));
     });
-    
+
 }
