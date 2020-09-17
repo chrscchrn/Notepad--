@@ -13,6 +13,7 @@ module.exports = (app) => {
 
     app.get("/notes", (req, res) => {
         db.Note.findAll({}).then(notes => {
+            console.log(notes)
             res.render("notes", {
                 data: notes
             })

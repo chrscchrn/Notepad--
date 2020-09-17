@@ -1,49 +1,22 @@
 <link rel="stylesheet" href="css/notes.css">
 
 
-
-</h4>
 <div class="container">
 
     <div class="row">
         {{!-- <div><article class="note-article" placeholder="Note article"></article></div> --}}
 
         <div class="row-notes">
-            <div class="notes">
-                <p><strong>
-                        <article class="note-title" placeholder="Note Title" maxlength="28" type="text">
-                    </strong>
-                <article class="note-textarea" placeholder=""></article>
-                </p>
-            </div>
 
-            <div class="notes">
-                <p><strong>
-                        <article class="note-title" placeholder="Note Title" maxlength="28" type="text">
-                    </strong>
-                <article class="note-textarea" placeholder=""></article>
-                </p>
-            </div>
-            <div class="notes">
-                <p><strong>
-                        <article class="note-title" placeholder="Note Title" maxlength="28" type="text">
-                    </strong>
-                <article class="note-textarea" placeholder=""></article>
-                </p>
-            </div>
+            {{#each data}}
+
+            {{> saved-notes}}
+
+            {{/each}}
+
         </div>
     </div>
 </div>
 
-</div>
 
-<!-- div with previously held notes go here -->
-<div id="articles">
-
-    {{#each data}}
-
-    {{> saved-notes}}
-
-    {{/each}}
-</div>
 <script type="text/javascript" src="./js/notes.js"></script>
