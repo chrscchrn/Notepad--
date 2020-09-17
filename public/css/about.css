@@ -14,7 +14,6 @@ body {
     /* border: 5px double black; */
     justify-content: space-evenly;
     animation: developers 800ms ease-in;
-    
 }
 .row {
     display: flex;
@@ -32,22 +31,17 @@ body {
     transition: 0.3s;
     width: 20%;
   }
-  
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
- 
 .card img {
     display: flex;
     vertical-align: middle;
     height: auto ;
     width: 100% ;
     object-fit: contain;
-      
   }
-
 @keyframes developers{
-
     0% {
         transform: translateY(200%);
     }
@@ -58,7 +52,6 @@ body {
 .info {
     margin: 15px;
 }
-
 .text {
   display: flex;
   justify-content: baseline;
@@ -81,26 +74,23 @@ body {
   left: calc(-1 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background: linear-gradient(60deg, #F79533, #F37055, #EF4E7B, #A166AB, #5073B8, #1098AD, #07B39B, #6FBA82);
   border-radius: calc(3 * var(--borderWidth));
   z-index: -1;
   animation: animatedgradient 4s ease alternate infinite;
   background-size: 300% 300%;
 }
-
-
 @keyframes animatedgradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
 p {
   font-family: 'Montserrat';
 }

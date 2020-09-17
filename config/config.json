@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Peaches04$",
-    "database": "project-two",
+    "password": "Tiger.sql12",
+    "database": "projecttwo",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
