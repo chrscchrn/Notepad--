@@ -13,7 +13,6 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     });
-    //Console.log everything from the work.js, routes and see where it goes. 
 
     // Note.associate = function(models) {
     //   // We're saying that a Note should belong to an User

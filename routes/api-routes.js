@@ -37,12 +37,18 @@ module.exports = (app) => {
         }
     });
 
+    app.get("/api/notes", (req, res) => {
+        db.Note.findAll({}).then(notes => {
+            res.json(notes);
+        });
+    });
+
+    //need to create an article ID system, maybe save the article url in sequelize
     app.post("/api/notes", (req, res) => {
-        console.log(req.body, "api-routes post is working"); //Its not working... :(
         db.Note.create({ 
             title: req.body.title,
             body: req.body.body
-        }).then(function(dbNote) {
+        }).then((dbNote) => {
             res.json(dbNote);
         });
     });
