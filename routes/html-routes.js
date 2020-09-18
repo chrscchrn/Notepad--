@@ -1,12 +1,14 @@
 const path = require("path");
 const db = require("../models")
 
+
 module.exports = (app) => {
 
     app.get("/search", (req, res) => {
         res.render("search", {
             data: "hello search"
-        })
+        }) 
+        
     });
 
     app.get("/notes", (req, res) => {
