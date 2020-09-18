@@ -69,7 +69,7 @@
   left: calc(-1 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad );
   border-radius: calc(3 * var(--borderWidth));
   z-index: -1;
   animation: animatedgradient 4s ease alternate infinite;
@@ -143,7 +143,7 @@ a {
   position: fixed;
   height: 70px;
   width: 100%;
-  background-color: coral;
+  background-color:  #1f3368;
 }
 .about-us {
   color: white;
@@ -159,53 +159,11 @@ img {
   border-radius: 50%;
 }
 .box {
-  height: 300px;
-  width: 300px;
+  margin-left: 150px;
+  height: 30px;
+  width: 30px;
   background-color: tomato;
-  animation: box 20000ms ease-in;
-}
-@keyframes box {
-  0% {
-    transform: translateX(200%);
-}
-60% {
-  transform: rotate3d(2, -1, -1, -0.2turn);
-}
-65% {
-  transform: rotate3d(2, -1, -1, -0.3turn);
-}
-70% {
-  transform: rotate3d(2, -1, -1, -0.4turn);
-}
-75% {
-  transform: rotate3d(2, -1, -1, -0.5turn);
-}
-80% {
-  transform: rotate3d(2, -1, -1, -0.6turn);
-}
-85% {
-  transform: rotate3d(2, -1, -1, -0.6turn);
-}
-90% {
-  transform: rotate3d(2, -1, -1, -0.7turn);
-}
-95% {
-  transform: translateY(-200%);
-}
-96% {
-  transform: translateX(-200%);
-}
-97% {
-  transform: translateX(200%);
-}
-98% {
-  transform: translateX(-200%);
-}
-99% {
-  transform: scale(20);
+  transform: translateY(-310px);
+  /* animation: box 2000ms ease-in; */
 }
 
-100% {
-    transform: rotate3d(2, -1, -1, -0.8turn);
-}
-}

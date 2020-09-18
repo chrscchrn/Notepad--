@@ -16,11 +16,11 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 15%;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+}
  
 img {
     display: flex;
@@ -43,31 +43,21 @@ img {
 .info {
     margin: 15px;
 }
-html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
+/* html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
 table { border-collapse: collapse; border-spacing: 0; }
 th, td { text-align: left; vertical-align: top; }
 h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
-img { border: 0; }
+img { border: 0; } */
 
 html {
     font-size: 16px;
     line-height: 1.5;
     background: #ffffff;
-    color: #4b0044;
-    /* color: #ef4144; */
     font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
     box-sizing: border-box;
 }
 
 body {
-    display: grid;
-    grid-template-columns: 2fr 5fr 3fr 2fr;
-    grid-template-rows: 1fr 1fr auto;
-    grid-template-areas:
-    "lp header header rp"
-    "lp intro intro rp"
-    "lp content content rp"
-    "lp footer footer rp";
     align-content: center;
 }
 
@@ -78,18 +68,14 @@ footer {
 }
 
 #title {
-    grid-area: header;
     font-size: 2rem;
     font-weight: 700;
     line-height: 0.8;
-    margin-top: 50px;
     align-self: center;
     text-align: center;
-    border-bottom: #4b0044 1px solid;
 }
 
 #intro {
-    
     font-size: 2rem;
     line-height: 1.4;
     text-align: center;
@@ -110,23 +96,22 @@ footer {
     align-self: flex-start;
 }
 
-#leftPanel {
-    grid-area: lp;
-    align-self: center;
-    /* border-right: #4b0044 1px solid; */
-    height: 100%;
-    width: 100%;
+#readArticle {
+    width: 50%;
+    right: 50%
 }
 
-#rightPanel {
-    grid-area: rp;
-    align-self: center;
-    /* border-left: #4b0044 1px solid; */
-    height: 100%;
-    width: 100%;
+#typeNotes {
+    width: 50%;
 }
 
- #content {
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+    background-color: #1f3368;
+}
+
+ /* #content {
     --borderWidth: 3px;
     background: #f4f6f7;
     position: relative;
@@ -157,4 +142,4 @@ footer {
       100% {
           background-position: 0% 50%;
       }
-  }
+  } */
