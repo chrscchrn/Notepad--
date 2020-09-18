@@ -11,15 +11,16 @@
 	<body>
 		<nav>
 			<div class="nav-wrapper">
-				<a href="" class="brand-logo">Notepad ++</a>
+				<a href="" class="brand-logo">Notepad --</a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<li><a href="/notes">Notes</a></li>
 					<li><a href="/work">Work</a></li>
 					<li><a href="/search">Search</a></li>
-					<li><a href="about.html">Developer info</a></li>
+					<li><a href="/about">Developer info</a></li>
           		</ul>
         	</div>
       	</nav>
+		
 		<div class="about" >
 		<div id="title" class="cssans cssans--center">
 			<div class="cssans__accessible">CSSans Pro</div>
@@ -37,11 +38,13 @@
 			</div>
     	</div>
 	</div>
+		<main id="swup" class="transition-fade">
+		{{{ body }}}
+		</main>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
 		<script src="js/main.js"></script>
-
-		{{{ body }}}
-
+		<script src="./dist/swup.js"></script>
 	</body>
 </html>

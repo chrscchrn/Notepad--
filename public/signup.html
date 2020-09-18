@@ -12,13 +12,16 @@
 <body>
     <header>
         <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo right">Logo</a>
-                <ul id="nav-mobile" class="left hide-on-med-and-down">
-                    <li><a href="#">Developer</a></li>
-                </ul>
-            </div>
-        </nav>
+			<div class="nav-wrapper">
+				<a href="" class="brand-logo">Notepad --</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="/notes">Notes</a></li>
+					<li><a href="/work">Work</a></li>
+					<li><a href="/search">Search</a></li>
+					<li><a href="/about">Developer info</a></li>
+          		</ul>
+        	</div>
+      	</nav>
     
         <div id="title" class="cssans cssans--center">
             <div class="cssans__accessible">CSSans Pro</div>
@@ -46,27 +49,25 @@
     <section id="content">
         <div>
             <div>
-                <h3>
-                    Signup
-                </h3>
                 <form class="signup">
+                  <h2 class="log">Signup</h2>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <!-- <label for="exampleInputEmail1">Email address</label> -->
                         <input type="email" class="form-control" id="email-input" placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
+                        <!-- <label for="exampleInputPassword1">Password</label> -->
                         <input type="password" class="form-control" id="password-input" placeholder="Password">
                     </div>
                     <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                         <span class="sr-only">Error:</span> <span class="msg"></span>
                     </div>
-                    <button type="submit" class="btn btn-default">Sign Up</button>
+                    <button type="submit" class="btn orange accent-3 btn btn-default">Sign Up</button>
                   </form>
                   <br />
                   <!-- change to route -->
-                <p>Or login here <a href="/Users/cochr/Desktop/projectDos/public/login.html">here</a></p>
+                <p>Or login <a href="/Users/cochr/Desktop/projectDos/public/login.html">here</a></p>
             </div>
         </div>
     </section>

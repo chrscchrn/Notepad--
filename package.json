@@ -13,7 +13,8 @@
     "mysql2": "^2.1.0",
     "newsapi": "^2.4.1",
     "sequelize": "^6.3.5",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "swup": "^2.0.11"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",

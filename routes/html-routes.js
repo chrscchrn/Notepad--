@@ -29,6 +29,14 @@ module.exports = (app) => {
             })
         })
     });
+    app.get("/about", (req, res) => {
+        db.Work.findAll({}).then(notes => {
+            console.log(notes)
+            res.render("about", {
+                data: notes
+            })
+        })
+    });
 
     app.get("/login", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/login.html"));
