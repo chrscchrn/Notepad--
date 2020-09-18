@@ -7,7 +7,7 @@ module.exports = (app) => {
 
     app.get("/", function(req, res) {
         if (req.user) {
-          res.redirect("/main");
+            res.redirect("/main");
         }
         res.sendFile(path.join(__dirname, "../public/signup.html"));
     });
