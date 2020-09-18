@@ -8,19 +8,21 @@ let year = date.getFullYear();
 let month = date.getMonth();
 let day = date.getDate();   
 let fullDay = `${year}-${month}-${day}`;
+<<<<<<< HEAD
 
+=======
+require("dotenv").config()
+>>>>>>> ebdc1a85795cd5a7b6e7008e10c9668f7d2557c7
 var passport = require("../config/passport");
 
 module.exports = (app) => {
 
-    app.post("/api/login", (req, res) => {
-        res.json({
-            email: req.user.email,
-            id: req.user.id
-        });
-    })
+    app.post("/api/login", passport.authenticate("local"), function(req, res) {
+        res.json(req.user);
+    });
 
     app.post("/api/signup", (req, res) => {
+        console.log(req.body.email, req.body.password);
         db.User.create({
             email: req.body.email,
             password: req.body.password
@@ -46,16 +48,18 @@ module.exports = (app) => {
             });
         }
     });
+<<<<<<< HEAD
 
+=======
+>>>>>>> ebdc1a85795cd5a7b6e7008e10c9668f7d2557c7
     app.get("/api/search", (req, res) => {
         axios.get(`http://newsapi.org/v2/everything?q=general&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
         .then(data => res.json(data.data.articles))
         .catch(err => res.json(err));
     });
-
-
+    
     app.post("/api/work", (req, res) => {
-        db.Work.create({
+        db.Note.create({
             title: req.body.title,
             body: req.body.body
         }).then((dbWork) => {
