@@ -62,7 +62,8 @@ footer {
 nav .nav-wrapper {
     position: relative;
     height: 100%;
-    background-color: coral
+    background-color:ivory;
+
 }
 #content {
     display: flex;
@@ -106,6 +107,8 @@ nav .nav-wrapper {
   }
 
   .about {
+      margin-left: 20px;
+      margin-right: 20px;
       padding-top: 20px;
       padding-bottom: 20px;
     --borderWidth: 3px;
@@ -137,3 +140,10 @@ nav .nav-wrapper {
       background-position: 0% 50%;
     }
   }
+
+  .cssans__word {
+      padding-top: 12px;
+      padding-left: 10px;
+      font-size: 1vh;
+  }
+ 

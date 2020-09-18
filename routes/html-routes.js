@@ -56,14 +56,5 @@ module.exports = (app) => {
             })
         })
     });
-    app.get("/about", (req, res) => {
-        db.Work.findAll({}).then(notes => {
-            console.log(notes)
-            res.render("about", {
-                data: notes
-            })
-        })
-    });
-
-    
+ 
     };

@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
 body {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  background: white; */
+
   margin: 20px
 }
 .container {
@@ -18,11 +14,7 @@ body {
 .row {
     display: flex;
 }
-/* h3 {
-    top: 2em;
-    left: 2em;
-    font-family: 'Montserrat';
-  } */
+
 .card {
   display: block;
   text-align: center;
@@ -61,36 +53,7 @@ body {
 .textP {
   padding-bottom: 20px;
 }
-.about {
-  --borderWidth: 3px;
-  background: white;
-  position: relative;
-  border-radius: var(--borderWidth);
-}
-.about:after {
-  content: '';
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #F79533, #F37055, #EF4E7B, #A166AB, #5073B8, #1098AD, #07B39B, #6FBA82);
-  border-radius: calc(3 * var(--borderWidth));
-  z-index: -1;
-  animation: animatedgradient 4s ease alternate infinite;
-  background-size: 300% 300%;
-}
-@keyframes animatedgradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+
 p {
   font-family: 'Montserrat';
 }
