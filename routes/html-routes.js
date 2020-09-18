@@ -47,9 +47,7 @@ module.exports = (app) => {
         // db.Note.findAll({}).then(notes => {
             
         // })
-        res.render("work", {
-          data: "nothing" 
-      })
+        res.render("work");
     });
  
 };
