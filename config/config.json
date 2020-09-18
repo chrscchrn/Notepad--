@@ -1,8 +1,13 @@
 {
   "development": {
+<<<<<<< HEAD
 
     "username": "root",
     "password": "Averie430",
+=======
+    "username": "root",
+    "password": "your password",
+>>>>>>> 6bf516a6c76c67530bc760d0c33f15cc42f7f5f4
     "database": "projecttwo",
     "host": "127.0.0.1",
     "dialect": "mysql"

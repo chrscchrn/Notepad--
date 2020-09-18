@@ -2,20 +2,23 @@
     This area will hold article content on one side and the notes input on the other
 </h1>
 <div id="readArticle"></div>
-    This is the div that will have the object which holds the article. This one goes on the left and takes up pretty much half the page
+This is the div that will have the object which holds the article. This one goes on the left and takes up pretty much
+half the page
 </div>
-<div id="typeNotes">
-    This is the notes section div. It will take up the other half of the page. Might be easier to use internal CSS in the header section of the html file. 
-    <h3>Title</h3>
-    <textarea name="title" id="noteTitle" cols="100" rows="2"></textarea>
-    <h3>Body</h3>
-    <textarea name="body" id="noteBody" cols="100" rows="10"></textarea>
-    <button id= "save" type="submit">Save</button>
+
+<div>
+
+    {{#each data}}
+
+    {{> work-notes}}
+
+    {{/each}}
+
 </div>
-    
-    
-<<<<<<< HEAD
+
 <script src="/work.js" ></script>
-=======
+
 <script src="./js/work.js" ></script>
->>>>>>> 83c6d6bdebb21dd72a581b4900eddbb9d0ef0061
+
+
+<script src="./js/work.js"></script>

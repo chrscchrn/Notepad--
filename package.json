@@ -1,8 +1,8 @@
 {
-  "name": "projectdos",
+  "name": "Notepad",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Notetaking site with article browsing capabilities",
+  "main": "server.js.js",
   "dependencies": {
     "axios": "^0.20.0",
     "bcrypt": "^5.0.0",

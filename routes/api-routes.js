@@ -38,8 +38,6 @@ module.exports = (app) => {
         }
     });
 
-
-
     //need to create an article ID system, maybe save the article url in sequelize
     app.post("/api/notes", (req, res) => {
         db.Note.create({
@@ -47,6 +45,24 @@ module.exports = (app) => {
             body: req.body.body
         }).then((dbNote) => {
             res.json(dbNote);
+        });
+    });
+
+
+    app.post("/api/search", (req, res) => {
+        db.Search.create({
+            entry: req.body.entry,
+        }).then((dbSearch) => {
+            res.json(dbSearch);
+        });
+    });
+
+    app.post("/api/work", (req, res) => {
+        db.Work.create({
+            title: req.body.title,
+            body: req.body.body
+        }).then((dbWork) => {
+            res.json(dbWork);
         });
     });
 }

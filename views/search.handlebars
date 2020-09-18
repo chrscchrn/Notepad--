@@ -6,8 +6,12 @@
     Search for Articles
 </button>
 
-<<<<<<< HEAD
 <script type="text/javascript" src="/search.js"></script>
-=======
 <script type="text/javascript" src="/js/search.js"></script>
->>>>>>> 83c6d6bdebb21dd72a581b4900eddbb9d0ef0061
+<ul>
+    {{#each data}}
+    {{> article-search}}
+    {{/each}}
+</ul>
+
+<script type="text/javascript" src="./js/search.js"></script>
