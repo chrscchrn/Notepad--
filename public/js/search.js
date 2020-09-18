@@ -1,27 +1,11 @@
-
-const key = 'fd74db3423b5430780f46c67f89febb2';
-let date = new Date();
-let year = date.getFullYear();
-let month = date.getMonth();
-let day = date.getDate();   
-let fullDay = `${year}-${month}-${day}`;
 const $searchButton = $("#searchButton");
-// const $resultsDiv = $("#results");
-
-function axiosTest() {
-    return axios.get(`http://newsapi.org/v2/everything?q=general&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
-    .then(response => {
-        return response;
-    })
-}
 
 (() => {
-    $searchButton.on("click", () => {
-        axiosTest()
-            .then(data => {
-                console.log(data.data.articles);
-                $("#results").text(data.data.articles[0].title);
-            })   
-        
+    $searchButton.on("click", event => {
+        event.preventDefault();
+        $.get("/api/search")
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
     });
 })()
+//Here we have a response of 20 articles. We will dynamically load then with JQuery instead of handlebars
