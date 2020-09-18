@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		{{!-- <link rel="stylesheet" href="/assets/css/style.css" type="text/css" /> --}}
 		<title>Main</title>
-		<link rel="stylesheet" href="css/style.css">
+		{{!-- <link rel="stylesheet" href="css/style.css"> --}}
 		<link rel="stylesheet" href="css/headerFont.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 	</head>
@@ -21,6 +21,7 @@
 		<button id="about">
 			About
 		</button>
+		{{> navbar}}
 		{{{ body }}}
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
