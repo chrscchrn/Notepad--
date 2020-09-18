@@ -13,12 +13,9 @@ var passport = require("../config/passport");
 
 module.exports = (app) => {
 
-    app.post("/api/login", (req, res) => {
-        res.json({
-            email: req.user.email,
-            id: req.user.id
-        });
-    })
+    app.post("/api/login", passport.authenticate("local"), function(req, res) {
+        res.json(req.user);
+    });
 
     app.post("/api/signup", (req, res) => {
         db.User.create({
@@ -46,16 +43,6 @@ module.exports = (app) => {
             });
         }
     });
-
-    app.post("/api/notes", (req, res) => {
-        db.Note.create({
-            title: req.body.title,
-            body: req.body.body
-        }).then((dbNote) => {
-            res.json(dbNote);
-        });
-    });
-
     
     app.get("/api/search", (req, res) => {
         axios.get(`http://newsapi.org/v2/everything?q=general&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
@@ -63,9 +50,8 @@ module.exports = (app) => {
         .catch(err => res.json(err));
     });
 
-
     app.post("/api/work", (req, res) => {
-        db.Work.create({
+        db.Note.create({
             title: req.body.title,
             body: req.body.body
         }).then((dbWork) => {
