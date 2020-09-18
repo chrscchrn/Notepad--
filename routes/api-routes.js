@@ -44,13 +44,12 @@ module.exports = (app) => {
             });
         }
     });
-    
     app.get("/api/search", (req, res) => {
         axios.get(`http://newsapi.org/v2/everything?q=general&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
         .then(data => res.json(data.data.articles))
         .catch(err => res.json(err));
     });
-
+    
     app.post("/api/work", (req, res) => {
         db.Note.create({
             title: req.body.title,
