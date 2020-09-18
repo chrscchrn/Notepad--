@@ -9,7 +9,6 @@ let month = date.getMonth();
 let day = date.getDate();   
 let fullDay = `${year}-${month}-${day}`;
 require("dotenv").config()
-const db = require("../models")
 var passport = require("../config/passport");
 
 module.exports = (app) => {
