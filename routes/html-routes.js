@@ -6,8 +6,11 @@ const db = require("../models")
 module.exports = (app) => {
 
     app.get("/search", (req, res) => {
-        res.render("search", {
-            data: "hello search"
+        db.Search.findAll({}).then(entry => {
+            console.log(entry)
+            res.render("search", {
+                data: entry
+            })
         })
     });
 
@@ -21,8 +24,11 @@ module.exports = (app) => {
     });
 
     app.get("/work", (req, res) => {
-        res.render("work", {
-            data: "hello work"
+        db.Work.findAll({}).then(notes => {
+            console.log(notes)
+            res.render("work", {
+                data: notes
+            })
         })
     });
 

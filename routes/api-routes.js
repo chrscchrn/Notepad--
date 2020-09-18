@@ -48,4 +48,22 @@ module.exports = (app) => {
             res.json(dbNote);
         });
     });
+
+
+    app.post("/api/search", (req, res) => {
+        db.Search.create({
+            entry: req.body.entry,
+        }).then((dbSearch) => {
+            res.json(dbSearch);
+        });
+    });
+
+    app.post("/api/work", (req, res) => {
+        db.Work.create({
+            title: req.body.title,
+            body: req.body.body
+        }).then((dbWork) => {
+            res.json(dbWork);
+        });
+    });
 }
