@@ -1,5 +1,5 @@
 (() => {
-    const loginForm = $("form.signup");
+    const loginForm = $("form.login");
     const emailInput = $("input#email-input");
     const passwordInput = $("input#password-input");
 
@@ -21,7 +21,7 @@
           email: email,
           password: password
         }).then(() => {
-            window.location.replace("/main");
+            window.location.replace("/notes");
         }).catch(err => {
             console.log(err);
         });

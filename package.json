@@ -20,10 +20,10 @@
     "passport-local": "^1.0.0",
     "sequelize": "^6.3.5",
     "sequelize-cli": "^6.2.0",
-    "sequelizer": "^1.1.4"
+    "sequelizer": "^1.1.4",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
     "eslint": "^7.9.0"
   },
   "scripts": {

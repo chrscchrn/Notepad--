@@ -6,31 +6,30 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = (app) => {
 
     app.get("/", function(req, res) {
-        if (req.user) {
-            res.redirect("/main");
-        }
+      if (req.user) {
+        res.redirect("/notes");
+      }
+      else {
         res.sendFile(path.join(__dirname, "../public/signup.html"));
+      }
     });
   
     app.get("/login", function(req, res) {
       if (req.user) {
-        res.redirect("/main");
+        res.redirect("/notes");
       }
-      res.sendFile(path.join(__dirname, "../public/login.html"));
-    });
-    
-    app.get("/main", isAuthenticated, function(req, res) {
-      res.sendFile(path.join(__dirname, "../public/work"));
+      else {
+        res.sendFile(path.join(__dirname, "../public/login.html"));
+      }
     });
 
-    app.get("/search", (req, res) => {
+    app.get("/search", isAuthenticated, (req, res) => {
         res.render("search", {
             data: "hello search"
         }) 
-        
     });
 
-    app.get("/notes", (req, res) => {
+    app.get("/notes", isAuthenticated, (req, res) => {
         db.Note.findAll({}).then(notes => {
             res.render("notes", {
                 data: notes
@@ -44,7 +43,7 @@ module.exports = (app) => {
         })
     });
 
-    app.get("/work", (req, res) => {
+    app.get("/work", isAuthenticated, (req, res) => {
         // db.Note.findAll({}).then(notes => {
             
         // })
