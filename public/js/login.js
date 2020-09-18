@@ -21,7 +21,7 @@
           email: email,
           password: password
         }).then(() => {
-            window.location.replace("/members");
+            window.location.replace("/main");
         }).catch(err => {
             console.log(err);
         });

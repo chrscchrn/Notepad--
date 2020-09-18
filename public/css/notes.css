@@ -10,7 +10,7 @@
 .note-article {
   height: 100px;
   width: 800px;
-  background: rgb(238, 236, 236);
+  background: white;
   
 }
 .row-notes {
@@ -20,6 +20,7 @@
 .notes {
        margin: 15px;
        width: 800px;
+       border-left: 6px solid #4ed3eb;
 }
 .note-title {
   display: flex;
@@ -35,7 +36,7 @@
   {
        -moz-border-radius: 6px;
        -webkit-border-radius: 6px;
-       background-color: #ffdddd;
+       background-color: white;
        background-image: url(../Images/icons/Pencil-48.png);
        background-position: 9px 0px;
        background-repeat: no-repeat;
@@ -113,7 +114,7 @@ a {
 @keyframes developers{
 
   0% {
-      transform: translateX(200%);
+      transform: translateX(40%);
   }
   /* 60% {
     transform: rotate3d(2, -1, -1, -0.3turn);
