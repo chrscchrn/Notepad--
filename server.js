@@ -1,7 +1,7 @@
 // Requiring necessary npm packages
 const express = require("express");
 const session = require("express-session");
-
+var passport = require("./config/passport");
 // Requiring passport as we've configured it
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
@@ -21,10 +21,9 @@ app.set("view engine", "handlebars");
 //app.engine
 
 // We need to use sessions to keep track of our user's login status
-app.use(
-    session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-);
-
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 // Requiring our routes
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
