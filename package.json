@@ -1,8 +1,8 @@
 {
-  "name": "Notepad",
+  "name": "notepad",
   "version": "1.0.0",
   "description": "Notetaking site with article browsing capabilities",
-  "main": "server.js.js",
+  "main": "server.js",
   "dependencies": {
     "axios": "^0.20.0",
     "express": "^4.17.1",
@@ -21,7 +21,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "sequelize db:migrate"
+    "migrate": "sequelize db:migrate",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
