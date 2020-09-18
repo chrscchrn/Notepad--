@@ -8,6 +8,9 @@ let year = date.getFullYear();
 let month = date.getMonth();
 let day = date.getDate();   
 let fullDay = `${year}-${month}-${day}`;
+require("dotenv").config()
+const db = require("../models")
+var passport = require("../config/passport");
 
 module.exports = (app) => {
 
@@ -59,5 +62,15 @@ module.exports = (app) => {
         axios.get(`http://newsapi.org/v2/everything?q=general&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
         .then(data => res.json(data.data.articles))
         .catch(err => res.json(err));
+    });
+
+
+    app.post("/api/work", (req, res) => {
+        db.Work.create({
+            title: req.body.title,
+            body: req.body.body
+        }).then((dbWork) => {
+            res.json(dbWork);
+        });
     });
 }
