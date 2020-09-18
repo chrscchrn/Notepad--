@@ -1,5 +1,16 @@
+require("dotenv").config();
+const db = require("../models");
+const { default: axios } = require("axios");
+
+const key = 'fd74db3423b5430780f46c67f89febb2';
+let date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth();
+let day = date.getDate();   
+let fullDay = `${year}-${month}-${day}`;
 require("dotenv").config()
 const db = require("../models")
+var passport = require("../config/passport");
 
 module.exports = (app) => {
 
@@ -37,7 +48,6 @@ module.exports = (app) => {
         }
     });
 
-    //need to create an article ID system, maybe save the article url in sequelize
     app.post("/api/notes", (req, res) => {
         db.Note.create({
             title: req.body.title,
@@ -47,14 +57,13 @@ module.exports = (app) => {
         });
     });
 
-
-    app.post("/api/search", (req, res) => {
-        db.Search.create({
-            entry: req.body.entry,
-        }).then((dbSearch) => {
-            res.json(dbSearch);
-        });
+    
+    app.get("/api/search", (req, res) => {
+        axios.get(`http://newsapi.org/v2/everything?q=general&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
+        .then(data => res.json(data.data.articles))
+        .catch(err => res.json(err));
     });
+
 
     app.post("/api/work", (req, res) => {
         db.Work.create({
