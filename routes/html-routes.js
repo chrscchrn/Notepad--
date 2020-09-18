@@ -51,11 +51,5 @@ module.exports = (app) => {
           data: "nothing" 
       })
     });
-<<<<<<< HEAD
  
-    };
-=======
-
-    
 };
->>>>>>> ebdc1a85795cd5a7b6e7008e10c9668f7d2557c7
