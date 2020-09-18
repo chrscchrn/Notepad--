@@ -1,10 +1,11 @@
 {
-  "name": "Notepad",
+  "name": "notepad",
   "version": "1.0.0",
   "description": "Notetaking site with article browsing capabilities",
-  "main": "server.js.js",
+  "main": "server.js",
   "dependencies": {
     "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
     "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
@@ -14,6 +15,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "newsapi": "^2.4.1",
+    "node-fetch": "^2.6.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "sequelize": "^6.3.5",
@@ -26,7 +28,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "sequelize db:migrate"
+    "migrate": "sequelize db:migrate",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
