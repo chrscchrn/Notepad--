@@ -32,19 +32,9 @@ MVP-Uno: Bring in articles from News API and show the in the front page. User ca
  - three.js
  - Sequelize ORM
  - CSS imports for fonts
-<<<<<<< HEAD
-
-## Installation
-
- - npm install newsapi
-
-# projectDos
-
-=======
 # projectDos
 
 
->>>>>>> 626e433453aadd779ca5ef8fcf7fa975a47ec28e
 # Database
 
 Sequelize is used throughout this project. While it is not needed, the sequelize cli is very useful for setting up your local development environment:

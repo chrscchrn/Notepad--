@@ -1,5 +1,6 @@
 require("dotenv").config()
 const db = require("../models")
+var passport = require("../config/passport");
 
 module.exports = (app) => {
 
