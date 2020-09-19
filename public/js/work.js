@@ -31,11 +31,12 @@ $($saveButton).on("click", save);
 
 function save(event) {
     event.preventDefault();
+    console.log("button working");
     var note = {
         title: $title.val().trim(),
         body: $body.val().trim()
     };
-    $.post("/api/notes", note); //put getNote at the end if the text area goes blank when running
+    $.post("/api/work", note); //put getNote at the end if the text area goes blank when running
 }
 
 // function getNote() { //not too sure about the route but need to edit later and confirm

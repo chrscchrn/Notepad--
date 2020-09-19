@@ -35,7 +35,7 @@ module.exports = (app) => {
     app.get("/notes", (req, res) => {
         db.Note.findAll({where: {
             UserId: req.user.id
-            }
+        }
         }).then(notes => {
             res.render("notes", {
                 data: notes
