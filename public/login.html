@@ -10,61 +10,48 @@
 
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-wrapper">
-                <ul id="nav-mobile" class="left hide-on-med-and-down">
-                    <li><a href="#">Developer</a></li>
-                </ul>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="/about">About Us</a></li>
-                </ul>
-            </div>
-        </nav>
+    <div class="cssans cssans--center titleDiv" >
+        <div class="cssans__accessible"></div>
     
-        <div id="title" class="cssans cssans--center">
-            <div class="cssans__accessible"></div>
-    
-            <div class="cssans__word">
-                <b class="cssans:N"></b>
-                <b class="cssans:o"></b>
-                <b class="cssans:t"></b>
-                <b class="cssans:e"></b>
-                <b class="cssans:p"></b>
-                <b class="cssans:a"></b>
-                <b class="cssans:d"></b>
-                <b class="cssans:-"></b>
-                <b class="cssans:-"></b>
-            </div>
+        <div class="cssans__word" id="title">
+            <b class="cssans:N"></b>
+            <b class="cssans:o"></b>
+            <b class="cssans:t"></b>
+            <b class="cssans:e"></b>
+            <b class="cssans:p"></b>
+            <b class="cssans:a"></b>
+            <b class="cssans:d"></b>
+            <b class="cssans:-"></b>
+            <b class="cssans:-"></b>
         </div>
-    </header>
+    </div>
 
     <div id="introDiv">
         <p id="intro">
-            Reducing tabs, windows, and clutter to one, easy to use, website. Search or browse for current events or scholarly journals and take notes as your reading.
+            Reducing tabs, windows, and clutter to one, easy to use website. Search or browse for current events or scholarly journals and take notes as your reading. 
         </p>
     </div>
     <section id="content">
-        <div>
-            <div>
-                <h2>Login Form</h2>
+        <div class="row">
+            <div class="col s12">
                 <form class="login">
+                    <h3 class="log">Login</h3>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <!-- <label for="exampleInputEmail1"></label> -->
                         <input type="email" class="form-control" id="email-input" placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
+                        <!-- <label for="exampleInputPassword1"></label> -->
                         <input type="password" class="form-control" id="password-input" placeholder="Password">
                     </div>
-                    <button type="submit" class="btn btn-default">Login</button>
+                    <button type="submit" class="btn orange accent-3 btn-default">Login</button>
                 </form>
-                <br />
                 <p>Or sign up <a href="/">here</a></p>
+                <a href="/about">Developer info</a>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/login.js"></script>
-    </section>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/login.js"></script>
 </body>
 </html>

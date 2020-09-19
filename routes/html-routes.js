@@ -5,33 +5,34 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = (app) => {
 
-    app.get("/", function(req, res) {
+    app.get("/", (req, res) => {
         if (req.user) {
-          res.redirect("/main");
+            res.redirect("/notes");
+            return;
         }
         res.sendFile(path.join(__dirname, "../public/signup.html"));
-    });
+      }
+    );
   
-    app.get("/login", function(req, res) {
+    app.get("/login", (req, res) => {
       if (req.user) {
-        res.redirect("/main");
+        res.redirect("/notes");
+        return;
       }
       res.sendFile(path.join(__dirname, "../public/login.html"));
     });
     
-    app.get("/main", isAuthenticated, function(req, res) {
-      res.sendFile(path.join(__dirname, "../public/work"));
-    });
-
-    app.get("/search", (req, res) => {
+    app.get("/search", isAuthenticated, (req, res) => {
         res.render("search", {
             data: "hello search"
         }) 
-        
     });
 
     app.get("/notes", (req, res) => {
-        db.Note.findAll({}).then(notes => {
+        db.Note.findAll({where: {
+            UserId: req.user.id
+        }
+        }).then(notes => {
             res.render("notes", {
                 data: notes
             })
@@ -44,14 +45,8 @@ module.exports = (app) => {
         })
     });
 
-    app.get("/work", (req, res) => {
-        // db.Note.findAll({}).then(notes => {
-            
-        // })
-        res.render("work", {
-          data: "nothing" 
-      })
+    app.get("/work", isAuthenticated, (req, res) => {
+        res.render("work");
     });
-
-    
+ 
 };

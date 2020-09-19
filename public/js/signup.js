@@ -21,7 +21,8 @@
             email: email,
             password: password
         }).then(() => {
-            window.location.replace("/members");
+            //changed members to notes
+            window.location.replace("/notes");
         }).catch(handleLoginErr);
     }
     function handleLoginErr(err) {

@@ -1,27 +1,75 @@
 (() => {
-// getNote();
+//get article number saved in local storage
+let articleNum = getUrl();
+let article = JSON.parse(localStorage.getItem(`article${articleNum.num}`)); 
+console.log(article.title, article.author, article.content, article.publishedAt, article.source.name, article.url, );
+$("#loadTitle").text(article.title);
+$("#loadPublisher").text(article.source.name);
+$("#loadDate").text(article.publishedAt);
+$("#loadAuthor").text(article.author);
+$("#loadContent").text(article.content);
+$("#loadURL").attr("href", article.url);
 
+function getUrl() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
+//save the article and notes
+let isCreated = false; //to edit needs to be in an if statement and find in sql
 var $title = $("#noteTitle");
 var $body = $("#noteBody");
+var $url = article.url;
+var $article = article.title;
 var $saveButton = $("#save")
 
 $($saveButton).on("click", save);
 
 function save(event) {
     event.preventDefault();
-    var note = {
-        title: $title.val().trim(),
-        body: $body.val().trim()
-    };
-    $.post("/api/notes", note); //put getNote at the end if the text area goes blank when running
+    if (isCreated == false) {
+        var note = {
+            title: $title.val().trim(),
+            body: $body.val().trim(),
+            url: $url,
+            article: $article
+        };
+        $.post("/api/work", note);
+    } else {
+        var noteUpdated = {
+            title: $title.val().trim(),
+            body: $body.val().trim(),
+            url: $url,
+            article: $article
+        };
+        $.get("/api/work/update", noteUpdated)
+            .then(res => {
+                //if it is found
+                if (res) {
+                    console.log(res, "good");
+                    var note = {
+                        title: $title.val().trim(),
+                        body: $body.val().trim(),
+                        url: $url,
+                        article: $article
+                    };
+                    $.ajax({
+                        url: '/api/work/update',
+                        type: 'PUT',
+                        data: note,
+                        success: () => {}
+                    });
+                }
+            })
+    }
+    isCreated = true;
 }
 
-// function getNote() { //not too sure about the route but need to edit later and confirm
-//     $.get("/api/notes/:id", (data) => {
-//         note = data;
-//     });
-// }
-
 })()
-
-// do this route last since it will need to be either loaded from /notes or brought up when an article is selected

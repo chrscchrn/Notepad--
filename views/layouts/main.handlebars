@@ -2,47 +2,52 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<title>Main</title>
-		<link rel="stylesheet" href="./css/style.css">
-		<link rel="stylesheet" href="./css/headerFont.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-	</head>
+	<title>Main</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/headerFont.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script  src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+</head>
 
 	<body>
 		<nav>
 			<div class="nav-wrapper">
-				<a href="/about" class="brand-logo">
-					<div id="navLogo" class="cssans cssans--center">
-				<div class="cssans__accessible">CSSans Pro</div>
-
+				<a href="" class="brand-logo">
 				<div class="cssans__word">
-					<b class="cssans:N"></b>
-					<b class="cssans:o"></b>
-					<b class="cssans:t"></b>
-					<b class="cssans:e"></b>
-					<b class="cssans:p"></b>
-					<b class="cssans:a"></b>
-					<b class="cssans:d"></b>
-					<b class="cssans:-"></b>
-					<b class="cssans:-"></b>
-				</div>
-			</div>
-				</a>
+				<b class="cssans:N"></b>
+				<b class="cssans:o"></b>
+				<b class="cssans:t"></b>
+				<b class="cssans:e"></b>
+				<b class="cssans:p"></b>
+				<b class="cssans:a"></b>
+				<b class="cssans:d"></b>
+				<b class="cssans:-"></b>
+				<b class="cssans:-"></b>
+			</div></a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="/notes">Notes</a></li>
-					<li><a href="/work">Work</a></li>
-					<li><a href="/search">Search</a></li>
-					<li><a href="about.html">Developer info</a></li>
-          		</ul>
-        	</div>
-      	</nav>
+			<ul class="right hide-on-med-and-down">
+				<li><a class="member-name"></a></li>
+				<li><a href="/search">Search the News</a></li>
+				<li><a href="/notes">Saved Notes</a></li>
+				<li><a href="/about">Developer info</a></li>
+				<li><a href="/logout">Logout</a></li>
+      		</ul>
+    	</div>
+  </nav>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="js/main.js"></script>
-
+  <ul class="sidenav" id="mobile-demo">
+   		<li><a href="/notes">Notes</a></li>
+		<li><a href="/work">Work</a></li>
+		<li><a href="/search">Search</a></li>
+		<li><a href="/about">Developer info</a></li>
+  </ul>
+		
+		<main id="swup" class="transition-fade">
 		{{{ body }}}
-
+		</main>
+		<script src="js/main.js"></script>
 	</body>
 </html>

@@ -1,10 +1,40 @@
-const $searchButton = $("#searchButton");
-
 (() => {
+    const $searchButton = $("#searchButton");
     $searchButton.on("click", event => {
         event.preventDefault();
+        localStorage.clear();
+        let instr = $("<h4>").text("Click title to start taking notes.");
+        let i = 1;
+        $("#searchResults").append(instr);
         $.get("/api/search")
-            .then(res => console.log(res))
+            .then(res => {
+                console.log(res);
+                res.forEach( data => {
+
+                    localStorage.setItem(`article${i}`, JSON.stringify(data));
+
+                    let $div = $("<div>");
+                    $div.append("</br>");
+                    $div.attr("class", "article-div article-div-color");
+
+                    var title = $(`<a href='/work?num=${i}'>`).text(data.title);
+                    i++;
+
+                    $div.append(title);
+                    var author = $("<p>").text(data.author);
+                    $div.append(author);
+                    var description = $("<p>").text(data.description);
+                    $div.append(description);
+                    var url = $(`<a href='${data.url}'>`).text("Link to Website");
+                    $div.append(url);
+
+                    $("#searchResults").append($div);
+                    $("#searchResults").append("</br>");
+
+                    
+                    //local storage?
+                })
+            })
             .catch(err => console.log(err));
     });
 })()

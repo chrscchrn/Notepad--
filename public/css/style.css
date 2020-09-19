@@ -1,64 +1,34 @@
-.container {
-    display: flex;
-    flex-direction: row;
-    /* border: 5px double black; */
-    justify-content: center;
-    animation: developers 800ms ease-in;
-    
-}
-.row {
-    display: flex;
-    
-}
-
-.card {
-    margin: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 15%;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
- 
-img {
-    display: flex;
-    vertical-align: middle;
-    height: auto ;
-    width: 100% ;
-    object-fit: contain;
-      
-  }
-
-@keyframes developers{
-
-    0% {
-        transform: translateY(150%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-.info {
-    margin: 15px;
-}
-/* html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
+html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
 table { border-collapse: collapse; border-spacing: 0; }
 th, td { text-align: left; vertical-align: top; }
 h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
-img { border: 0; } */
+img { border: 0; }
+
+nav {
+    margin-bottom: 30px;
+}
+
+nav .nav-wrapper {
+    position: relative;
+    background-color:rgb(255, 175, 146);
+    
+}
 
 html {
     font-size: 16px;
     line-height: 1.5;
-    background: #ffffff;
+    background: rgb(255, 250, 250);
     font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
     box-sizing: border-box;
+    background-color: #fff;
+    background-image:
+    linear-gradient(90deg, transparent 179px, #abced4 79px, #abced4 181px, transparent 181px),
+    linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
 }
 
-body {
-    align-content: center;
+main {
+    align-items: center;
 }
 
 footer {
@@ -68,7 +38,7 @@ footer {
 }
 
 #title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 0.8;
     align-self: center;
@@ -76,24 +46,18 @@ footer {
 }
 
 #intro {
-    font-size: 2rem;
-    line-height: 1.4;
+    font-size: 1.8rem;
+    line-height: 1.2;
     text-align: center;
-    align-self: center;
 }
 
 #introDiv {
+    align-content: center;
     grid-area: intro;
-    width: 100%;
+    width: 50%;
     height: 100%;
-}
-
-#content {
-    grid-area: content;
-    font-size: 1.5rem;
-    line-height: 1.4;
-    text-align: center;
-    align-self: flex-start;
+    position: relative;
+    right: -25%;
 }
 
 #readArticle {
@@ -105,12 +69,103 @@ footer {
     width: 50%;
 }
 
-nav .nav-wrapper {
-    position: relative;
-    height: 100%;
-    background-color: #72276d;
+#content {
+    display: flex;
+    justify-content: center;
+    grid-area: content;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    text-align: center;
 }
 
-#navLogo {
+.subHeader {
+    width: 50%;
+    position: relative;
+    right: -40%;
+}
+
+.titleDiv {
+    margin-top: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #72276d80;
+}
+
+.login {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    width: 500px;
+    border: .5px solid black;
+    border-radius: 25px;
+    border-top: 5px solid gray;
+    background-color: rgba(247, 247, 247, 0.212);
+}
+
+.signup {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    width: 500px;
+    border: .5px solid black;
+    border-radius: 30px;
+    border-top: 5px solid gray;
+}
+
+.btn {
+    background-color: rgb(255, 162, 129);
+}
+
+.article-div-color {
+    background-color: transparent;
+    border-top: black 1px solid;
+}
+
+.article-div {
+    font-size: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.transition-fade {
+    transition: 0.8s;
+    opacity: 1;
+}
+  
+html.is-animating .transition-fade {
+opacity: 0;
+}
+
+.about {
+margin-left: 20px;
+margin-right: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+--borderWidth: 3px;
+background: white;
+position: relative;
+border-radius: var(--borderWidth);
+}
+
+.cssans__word {
+    padding-top: 12px;
+    padding-left: 10px;
+    font-size: 1vh;
+    position: fixed;
+}
+
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 2.5rem;
+}
+
+nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
     font-size: 1rem;
+    color: blue;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
 }

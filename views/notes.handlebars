@@ -1,16 +1,14 @@
-<h1>Notes</h1>
+<h1 class="subHeader">Saved Notes</h1>
 <!-- div with previously held notes go here -->
 <div id="articles"></div>
-<script type="text/javascript" src="/notes.js"></script>
 <link rel="stylesheet" href="css/notes.css">
 <link rel="stylesheet" href="css/headerFont.css">
-
 
 <div class="container">
     <div class="row">
         <div class="row-notes">
             {{#each data}}
-            {{> saved-notes}}
+                {{> saved-notes}}
             {{/each}}
         </div>
     </div>
