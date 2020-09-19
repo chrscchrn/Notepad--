@@ -1,26 +1,30 @@
-nav {
-    margin-bottom: 30px;
-}
-/* html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
+html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
 table { border-collapse: collapse; border-spacing: 0; }
 th, td { text-align: left; vertical-align: top; }
 h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
-img { border: 0; } */
-.title {
-    display: flex;
-    justify-content: center;
+img { border: 0; }
+
+nav {
+    margin-bottom: 30px;
+}
+
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+    background-color:rgb(255, 162, 129);
+
 }
 
 html {
     font-size: 16px;
     line-height: 1.5;
-    background: #ffffff;
+    background: rgb(255, 250, 250);
     font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
     box-sizing: border-box;
 }
 
-body {
-    align-content: center;
+main {
+    align-items: center;
 }
 
 footer {
@@ -30,7 +34,6 @@ footer {
 }
 
 #title {
-    font-size: 2rem;
     font-weight: 700;
     line-height: 0.8;
     align-self: center;
@@ -38,16 +41,18 @@ footer {
 }
 
 #intro {
-    font-size: 2rem;
-    line-height: 1.4;
+    font-size: 1.8rem;
+    line-height: 1.2;
     text-align: center;
-    align-self: center;
 }
 
 #introDiv {
+    align-content: center;
     grid-area: intro;
-    width: 100%;
+    width: 50%;
     height: 100%;
+    position: relative;
+    right: -25%;
 }
 
 #readArticle {
@@ -59,21 +64,15 @@ footer {
     width: 50%;
 }
 
-nav .nav-wrapper {
-    position: relative;
-    height: 100%;
-<<<<<<< HEAD
-    background-color:ivory;
-
-}
 #content {
     display: flex;
     justify-content: center;
     grid-area: content;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1.4;
     text-align: center;
 }
+
 .login {
     padding-left: 40px;
     padding-right: 40px;
@@ -90,69 +89,65 @@ nav .nav-wrapper {
     padding-bottom: 30px;
     width: 500px;
     border: .5px solid black;
-    border-radius: 25px;
+    border-radius: 30px;
     border-top: 5px solid gray;
 }
 
 .btn {
-    background-color: coral;
+    background-color: rgb(255, 162, 129);
+}
+
+.article-div-color {
+    background-color: transparent;
+    border-top: black 1px solid;
+}
+
+.article-div {
+    font-size: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
 .transition-fade {
-    transition: 0.4s;
+    transition: 0.8s;
     opacity: 1;
-  }
+}
   
-  html.is-animating .transition-fade {
-    opacity: 0;
-  }
-
-  .about {
-      margin-left: 20px;
-      margin-right: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    --borderWidth: 3px;
-    background: white;
-    position: relative;
-    border-radius: var(--borderWidth);
-  }
-  .about:after {
-    content: '';
-    position: absolute;
-    top: calc(-1 * var(--borderWidth));
-    left: calc(-1 * var(--borderWidth));
-    height: calc(100% + var(--borderWidth) * 2);
-    width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(60deg, #F79533, #F37055, #EF4E7B, #A166AB, #5073B8, #1098AD, #07B39B, #6FBA82);
-    border-radius: calc(3 * var(--borderWidth));
-    z-index: -1;
-    animation: animatedgradient 4s ease alternate infinite;
-    background-size: 300% 300%;
-  }
-  @keyframes animatedgradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  .cssans__word {
-      padding-top: 12px;
-      padding-left: 10px;
-      font-size: 1vh;
-  }
- 
-=======
-    background-color: #72276d;
+html.is-animating .transition-fade {
+opacity: 0;
 }
 
-#navLogo {
+.about {
+margin-left: 20px;
+margin-right: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+--borderWidth: 3px;
+background: white;
+position: relative;
+border-radius: var(--borderWidth);
+}
+
+.cssans__word {
+    padding-top: 12px;
+    padding-left: 10px;
+    font-size: 1vh;
+    position: fixed;
+}
+
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 2.5rem;
+}
+
+nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
     font-size: 1rem;
+    color: blue;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
 }
->>>>>>> ebdc1a85795cd5a7b6e7008e10c9668f7d2557c7

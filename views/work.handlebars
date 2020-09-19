@@ -9,21 +9,19 @@ This is the div that will have the object which holds the article. This one goes
 half the page
 </div> --}}
 <main class="main">
-<article class="work-article"> 
-    Articles
-</article>
-<aside class="work-notes">
-    
-    <textarea name="text" id="ca" cols="30" rows="10"></textarea>
-    
-</aside>
+    <article class="work-article"> 
+        Articles
+    </article>
+    <aside class="work-notes">
+        <textarea name="title" id="noteTitle" cols="30" rows="10"></textarea>
+        <textarea name="text" id="noteBody" cols="30" rows="10"></textarea>
+        <button id="save">
+            Save
+        </button>    
+    </aside>
+
 </main>
 
 
-{{!-- <div>
-    {{#each data}}
-        {{> work-notes}}
-    {{/each}}
-</div> --}}
 
 <script src="./js/work.js"></script>
