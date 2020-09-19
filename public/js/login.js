@@ -1,5 +1,8 @@
 (() => {
+<<<<<<< HEAD
     //changed signup to login
+=======
+>>>>>>> 94a20841846f4c8bda0c98eb77e9a925caa8098e
     const loginForm = $("form.login");
     const emailInput = $("input#email-input");
     const passwordInput = $("input#password-input");
@@ -23,7 +26,10 @@
           email: email,
           password: password
         }).then(() => {
+<<<<<<< HEAD
             console.log("trying to login")
+=======
+>>>>>>> 94a20841846f4c8bda0c98eb77e9a925caa8098e
             window.location.replace("/notes");
         }).catch(err => {
             console.log(err);

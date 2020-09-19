@@ -8,15 +8,16 @@ module.exports = (app) => {
     app.get("/", function(req, res) {
         if (req.user) {
             res.redirect("/main");
-            // return
+            return
         }
         res.sendFile(path.join(__dirname, "../public/signup.html"));
-    });
+      }
+    );
   
     app.get("/login", function(req, res) {
       if (req.user) {
         res.redirect("/main");
-        // return
+        return
       }
       res.sendFile(path.join(__dirname, "../public/login.html"));
     });
@@ -25,11 +26,10 @@ module.exports = (app) => {
     //   res.sendFile(path.join(__dirname, "../public/work"));
     // });
 
-    app.get("/search", (req, res) => {
+    app.get("/search", isAuthenticated, (req, res) => {
         res.render("search", {
             data: "hello search"
         }) 
-        
     });
 
     app.get("/notes", (req, res) => {
@@ -49,7 +49,7 @@ module.exports = (app) => {
         })
     });
 
-    app.get("/work", (req, res) => {
+    app.get("/work", isAuthenticated, (req, res) => {
         // db.Note.findAll({}).then(notes => {
             
         // })
