@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+html {
+  font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
+}
+
 .container {
-    margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -15,17 +19,19 @@
     transition: 0.3s;
     width: 350px;
     height: auto;
-  }
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 .card img {
     display: flex;
     vertical-align: middle;
     height: auto ;
     width: 100% ;
     object-fit: contain;
-  }
+}
 @keyframes developers{
     0% {
         transform: translateY(200%);
@@ -40,15 +46,7 @@
 .text {
   display: flex;
   justify-content: baseline;
-  font-family: 'Montserrat';
   margin-bottom: 20px;
-}
-.textP {
-  padding-bottom: 20px;
-}
-
-p {
-  font-family: 'Montserrat';
 }
 
 a {

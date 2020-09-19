@@ -4,13 +4,29 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [1]
+                len: [1, 100]
             }
         },
         body: {
             type: DataTypes.TEXT,
             allowNull: true,
-            len: [1]
+            validate: {
+                len: [1]
+          }
+        },
+        url: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        article: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
         }
     });
 
