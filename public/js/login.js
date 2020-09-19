@@ -1,10 +1,12 @@
 (() => {
-    const loginForm = $("form.signup");
+    //changed signup to login
+    const loginForm = $("form.login");
     const emailInput = $("input#email-input");
     const passwordInput = $("input#password-input");
 
     loginForm.on("submit", (event) => {
         event.preventDefault();
+        console.log("inside sub listener")
         const userData = {
             email: emailInput.val().trim(),
             password: passwordInput.val().trim()
@@ -21,7 +23,8 @@
           email: email,
           password: password
         }).then(() => {
-            window.location.replace("/main");
+            console.log("trying to login")
+            window.location.replace("/notes");
         }).catch(err => {
             console.log(err);
         });

@@ -62,9 +62,7 @@ footer {
 nav .nav-wrapper {
     position: relative;
     height: 100%;
-<<<<<<< HEAD
     background-color:ivory;
-
 }
 #content {
     display: flex;
@@ -99,7 +97,7 @@ nav .nav-wrapper {
 }
 
 .transition-fade {
-    transition: 0.4s;
+    transition: 0.8s;
     opacity: 1;
   }
   
@@ -146,13 +144,20 @@ nav .nav-wrapper {
       padding-top: 12px;
       padding-left: 10px;
       font-size: 1vh;
+      position: fixed;
   }
- 
-=======
-    background-color: #72276d;
-}
-
-#navLogo {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+  }
+  nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
     font-size: 1rem;
+    color: blue;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
 }
->>>>>>> ebdc1a85795cd5a7b6e7008e10c9668f7d2557c7

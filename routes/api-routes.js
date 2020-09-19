@@ -8,11 +8,6 @@ let year = date.getFullYear();
 let month = date.getMonth();
 let day = date.getDate();   
 let fullDay = `${year}-${month}-${day}`;
-<<<<<<< HEAD
-
-=======
-require("dotenv").config()
->>>>>>> ebdc1a85795cd5a7b6e7008e10c9668f7d2557c7
 var passport = require("../config/passport");
 
 module.exports = (app) => {
@@ -48,10 +43,6 @@ module.exports = (app) => {
             });
         }
     });
-<<<<<<< HEAD
-
-=======
->>>>>>> ebdc1a85795cd5a7b6e7008e10c9668f7d2557c7
     app.get("/api/search", (req, res) => {
         axios.get(`http://newsapi.org/v2/everything?q=general&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
         .then(data => res.json(data.data.articles))
@@ -61,7 +52,8 @@ module.exports = (app) => {
     app.post("/api/work", (req, res) => {
         db.Note.create({
             title: req.body.title,
-            body: req.body.body
+            body: req.body.body,
+            UserId: req.user.id
         }).then((dbWork) => {
             res.json(dbWork);
         });
