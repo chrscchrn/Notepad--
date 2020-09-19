@@ -54,7 +54,8 @@ module.exports = (app) => {
     app.post("/api/work", (req, res) => {
         db.Note.create({
             title: req.body.title,
-            body: req.body.body
+            body: req.body.body,
+            UserId: req.user.id
         }).then((dbWork) => {
             res.json(dbWork);
         });

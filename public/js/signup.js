@@ -21,6 +21,10 @@
             email: email,
             password: password
         }).then(() => {
+<<<<<<< HEAD
+            //changed members to notes
+=======
+>>>>>>> 94a20841846f4c8bda0c98eb77e9a925caa8098e
             window.location.replace("/notes");
         }).catch(handleLoginErr);
     }
