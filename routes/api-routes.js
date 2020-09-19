@@ -13,7 +13,7 @@ var passport = require("../config/passport");
 
 module.exports = (app) => {
 
-    app.post("/api/login", passport.authenticate("local"), function(req, res) {
+    app.post("/api/login", passport.authenticate("local"), (req, res) => {
         res.json(req.user);
     });
 
@@ -45,8 +45,8 @@ module.exports = (app) => {
         }
     });
     
-    app.get("/api/search", (req, res) => {
-        axios.get(`http://newsapi.org/v2/everything?q=general&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
+    app.get("/api/search", (req, res) => { //enter user keywork in q key
+        axios.get(`http://newsapi.org/v2/top-headlines?country=us&language=en&category=technology&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
         .then(data => res.json(data.data.articles))
         .catch(err => res.json(err));
     });
@@ -55,7 +55,28 @@ module.exports = (app) => {
         db.Note.create({
             title: req.body.title,
             body: req.body.body,
+            url: req.body.url,
+            article: req.body.article,
             UserId: req.user.id
+        }).then((dbWork) => {
+            res.json(dbWork);
+        });
+    });
+
+    app.get("/api/work/update", (req, res) => {
+        db.Note.findOne({ where: { url: req.query.url } })
+            .then((dbWork) => {
+                res.json(dbWork);
+            });
+    });
+
+    app.put("/api/work/update", (req, res) => {
+        db.Note.update({
+            title: req.body.title,
+            body: req.body.body
+        },
+        {
+            where: { url: req.body.url }
         }).then((dbWork) => {
             res.json(dbWork);
         });

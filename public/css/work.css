@@ -1,3 +1,7 @@
+html {
+  font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -11,18 +15,26 @@ body {
     margin-top: 1rem;
 }
 
-.work-article {
+#work-article {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
     flex-grow: 2;
-    margin-right: 1rem;
-    border: 3px solid black;
+    /* margin-right: 1rem; */
+    border: 3px solid coral;
     overflow-y: auto;
+    text-align: center;
 }
 
-.work-notes {
+#work-notes {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
     flex-grow: 2;
     flex-shrink: 0;
     flex-basis: 10rem;
-    border: 3px solid black;
+    border: 3px solid coral;
 }
 
 /* .main {

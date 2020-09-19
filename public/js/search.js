@@ -3,11 +3,12 @@
     $searchButton.on("click", event => {
         event.preventDefault();
         localStorage.clear();
-        let instr = $("<h4>").text("Click the title to start taking notes.");
+        let instr = $("<h4>").text("Click title to start taking notes.");
         let i = 1;
         $("#searchResults").append(instr);
         $.get("/api/search")
             .then(res => {
+                console.log(res);
                 res.forEach( data => {
 
                     localStorage.setItem(`article${i}`, JSON.stringify(data));
@@ -24,7 +25,7 @@
                     $div.append(author);
                     var description = $("<p>").text(data.description);
                     $div.append(description);
-                    var url = $(`<a href='${data.ur}'>`).text("Link to Website");
+                    var url = $(`<a href='${data.url}'>`).text("Link to Website");
                     $div.append(url);
 
                     $("#searchResults").append($div);
