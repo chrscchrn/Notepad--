@@ -44,6 +44,7 @@ module.exports = (app) => {
             });
         }
     });
+    
     app.get("/api/search", (req, res) => {
         axios.get(`http://newsapi.org/v2/everything?q=general&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
         .then(data => res.json(data.data.articles))

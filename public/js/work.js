@@ -1,11 +1,33 @@
 (() => {
 // getNote();
 
+function getUrl()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+let articleNum = getUrl();
+
+let article = localStorage.getItem(`article${articleNum.num}`) //string
+console.log(article);
+
+
+
+
 var $title = $("#noteTitle");
 var $body = $("#noteBody");
 var $saveButton = $("#save")
 
 $($saveButton).on("click", save);
+
+//get from local storage then clear it
 
 function save(event) {
     event.preventDefault();

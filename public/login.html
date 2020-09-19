@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/headerFont.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="nav-wrapper">
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="/about">About Us</a></li>
-                </ul>
-            </div>
-        </nav>
-    
+    <nav>
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
         <div id="title" class="cssans cssans--center">
             <div class="cssans__accessible"></div>
     
@@ -34,35 +33,36 @@
                 <b class="cssans:-"></b>
             </div>
         </div>
-    </header>
 
-    <div id="introDiv">
-        <p id="intro">
-            Reducing tabs, windows, and clutter to one, easy to use website. Search or browse for current events or scholarly journals and take notes as your reading. 
-        </p>
-    </div>
-    <section id="content">
-        <div>
-            <div>
-                <form class="login">
-                    <h2 class="log">Login</h2>
-                    <div class="form-group">
-                        <!-- <label for="exampleInputEmail1">Email address</label> -->
-                        <input type="email" class="form-control" id="email-input" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <!-- <label for="exampleInputPassword1">Password</label> -->
-                        <input type="password" class="form-control" id="password-input" placeholder="Password">
-                    </div>
-                    
-                    <button type="submit" class="btn orange accent-3 btn-default">Login</button>
-                </form>
-                <br />
-                <p>Or sign up <a href="/">here</a></p>
-            </div>
+        <div id="introDiv">
+            <p id="intro">
+                Reducing tabs, windows, and clutter to one, easy to use website. Search or browse for current events or scholarly journals and take notes as your reading. 
+            </p>
         </div>
 
-    </section>
+        <section id="content">
+            <div>
+                <div>
+                    <form class="login">
+                        <h2 class="log">Login</h2>
+                        <div class="form-group">
+                            <!-- <label for="exampleInputEmail1">Email address</label> -->
+                            <input type="email" class="form-control" id="email-input" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="exampleInputPassword1">Password</label> -->
+                            <input type="password" class="form-control" id="password-input" placeholder="Password">
+                        </div>
+                        
+                        <button type="submit" class="btn orange accent-3 btn-default">Login</button>
+                    </form>
+                    <br />
+                    <p>Or sign up <a href="/">here</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/login.js"></script>
 </body>
