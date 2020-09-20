@@ -1,6 +1,18 @@
-(() => {
-    
-})()
-//this needs to dynamically load all notes data. Then make buttons to go to that specific note-article pair
+const elements = Array.from(document.querySelectorAll('.fill'));
 
-// This is currently working
+function fill(item, index) {
+  
+  const bgColor = getComputedStyle(item).backgroundColor,
+  fillLayer = document.createElement('div');
+  fillLayer.classList.add('fill-layer');
+  item.style.backgroundColor = 'transparent';
+  item.style.position = 'relative';
+  item.style.overflow = 'hidden';
+  setTimeout(function() {
+    fillLayer.style.backgroundColor = bgColor;  
+    item.appendChild(fillLayer);
+  }, index * 1000);
+  
+}
+
+elements.forEach(fill);
