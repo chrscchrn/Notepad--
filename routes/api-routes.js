@@ -1,15 +1,16 @@
 require("dotenv").config();
+require("dotenv").config()
 const db = require("../models");
 const { default: axios } = require("axios");
+var passport = require("../config/passport");
 
 const key = 'fd74db3423b5430780f46c67f89febb2';
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
 let day = date.getDate();   
+month++;
 let fullDay = `${year}-${month}-${day}`;
-require("dotenv").config()
-var passport = require("../config/passport");
 
 module.exports = (app) => {
 
@@ -46,6 +47,7 @@ module.exports = (app) => {
     });
     
     app.get("/api/search", (req, res) => { //enter user keywork in q key
+        let category = "";
         axios.get(`http://newsapi.org/v2/top-headlines?country=us&language=en&category=technology&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
         .then(data => res.json(data.data.articles))
         .catch(err => res.json(err));

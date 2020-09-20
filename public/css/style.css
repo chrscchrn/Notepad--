@@ -4,6 +4,19 @@ th, td { text-align: left; vertical-align: top; }
 h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
 img { border: 0; }
 
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    background: rgb(255, 250, 250);
+    font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
+    box-sizing: border-box;
+    background-color: #fff;
+    background-image:
+    linear-gradient(90deg, transparent 179px, #abced4 79px, #abced4 181px, transparent 181px),
+    linear-gradient(rgb(226, 226, 226) .1em, transparent .1em);
+    background-size: 100% 1.8em;
+}
+
 nav {
     margin-bottom: 30px;
 }
@@ -14,17 +27,14 @@ nav .nav-wrapper {
     
 }
 
-html {
-    font-size: 16px;
-    line-height: 1.5;
-    background: rgb(255, 250, 250);
-    font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
-    box-sizing: border-box;
-    background-color: #fff;
-    background-image:
-    linear-gradient(90deg, transparent 179px, #abced4 79px, #abced4 181px, transparent 181px),
-    linear-gradient(#eee .1em, transparent .1em);
-    background-size: 100% 1.2em;
+nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: blue;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
 }
 
 main {
@@ -37,57 +47,16 @@ footer {
     margin: auto;
 }
 
-#title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    line-height: 0.8;
-    align-self: center;
-    text-align: center;
-}
-
-#intro {
-    font-size: 1.8rem;
-    line-height: 1.2;
-    text-align: center;
-}
-
-#introDiv {
-    align-content: center;
-    grid-area: intro;
-    width: 50%;
-    height: 100%;
-    position: relative;
-    right: -25%;
-}
-
-#readArticle {
-    width: 50%;
-    right: 50%
-}
-
-#typeNotes {
-    width: 50%;
-}
-
-#content {
-    display: flex;
-    justify-content: center;
-    grid-area: content;
-    font-size: 1.6rem;
-    line-height: 1.4;
-    text-align: center;
+.titleDiv {
+    margin-top: 10px;
+    padding: 8px;
+    border-bottom: 2px solid #72276d80;
 }
 
 .subHeader {
     width: 50%;
     position: relative;
-    right: -40%;
-}
-
-.titleDiv {
-    margin-top: 20px;
-    padding: 10px;
-    border-bottom: 2px solid #72276d80;
+    right: -35%;
 }
 
 .login {
@@ -97,8 +66,8 @@ footer {
     width: 500px;
     border: .5px solid black;
     border-radius: 25px;
-    border-top: 5px solid gray;
-    background-color: rgba(247, 247, 247, 0.212);
+    border-top: 5px solid rgb(51, 51, 51);
+    background-color: rgba(255, 255, 255, 0.315);
 }
 
 .signup {
@@ -107,8 +76,9 @@ footer {
     padding-bottom: 30px;
     width: 500px;
     border: .5px solid black;
-    border-radius: 30px;
-    border-top: 5px solid gray;
+    border-radius: 25px;
+    border-top: 5px solid rgb(51, 51, 51);
+    background-color: rgba(255, 255, 255, 0.315);
 }
 
 .btn {
@@ -117,7 +87,7 @@ footer {
 
 .article-div-color {
     background-color: transparent;
-    border-top: black 1px solid;
+    border-top: rgb(39, 39, 39) 2px solid;
 }
 
 .article-div {
@@ -160,12 +130,43 @@ width: 100%;
 height: 2.5rem;
 }
 
-nav ul a {
-    -webkit-transition: background-color .3s;
-    transition: background-color .3s;
-    font-size: 1rem;
-    color: blue;
-    display: block;
-    padding: 0 15px;
-    cursor: pointer;
+#title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 0.8;
+    align-self: center;
+    text-align: center;
+}
+
+#intro {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+#introDiv {
+    align-content: center;
+    grid-area: intro;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    right: -25%;
+}
+
+#readArticle {
+    width: 50%;
+    right: 50%
+}
+
+#typeNotes {
+    width: 50%;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    grid-area: content;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    text-align: center;
 }
