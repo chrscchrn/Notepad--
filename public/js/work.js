@@ -2,13 +2,20 @@
     //get article number saved in local storage
     let articleNum = getUrl();
     let article = JSON.parse(localStorage.getItem(`article${articleNum.num}`)); 
-    // console.log(article.title, article.author, article.content, article.publishedAt, article.source.name, article.url, );
+    console.log(article);
     $("#loadTitle").text(article.title);
-    $("#loadPublisher").text(article.source.name);
-    $("#loadDate").text(article.publishedAt);
-    $("#loadAuthor").text(article.author);
-    $("#loadContent").text(article.content);
+    $("#loadPublisher").text(article.source.name); //
+    $("#loadDate").text(article.publishedAt); //
+    $("#loadAuthor").text(article.author); //
+    $("#loadContent").text(article.content); //
     $("#loadURL").attr("href", article.url);
+    if (article.title) {
+        $("#noteTitle").text(article.title);
+    }
+    if (article.body) {
+        $("#noteBody").text(article.body);
+    }
+    
 
     function getUrl() {
         var vars = [], hash;
@@ -26,6 +33,11 @@
     var $body = $("#noteBody");
     var $url = article.url;
     var $article = article.title;
+    var $source = article.source.name;
+    var $publishedAt = article.publishedAt;
+    var $author = article.author;
+    var $content = article.content;
+
     var $saveButton = $("#save")
     
     //checking if the current note has been created
@@ -55,7 +67,11 @@
                 title: $title.val().trim(),
                 body: $body.val().trim(),
                 url: $url,
-                article: $article
+                article: $article,
+                source: $source,
+                publishedAt: $publishedAt,
+                author: $author,
+                conent: $content
             };
             $.post("/api/work", note);
         } else {

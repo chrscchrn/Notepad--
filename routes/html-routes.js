@@ -37,12 +37,21 @@ module.exports = (app) => {
             order: [ ['updatedAt', 'DESC'] ]
         }).then(notes => {
             for (let i in notes) {
-                console.log(notes[i], "BETWEEN");
+                let location = parseInt(i);
+                notes[i].num = location + 1;
             }
-
             res.render("notes", {
                 data: notes
             })
+        })
+    });
+
+    app.get("/notesdata", isAuthenticated, (req, res) => {
+        db.Note.findAll({
+            where: { UserId: req.user.id },
+            order: [ ['updatedAt', 'DESC'] ]
+        }).then(notes => {
+            res.json(notes);
         })
     });
 

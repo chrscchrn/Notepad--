@@ -27,7 +27,21 @@ module.exports = function (sequelize, DataTypes) {
             validate: {
                 len: [1]
             }
+        },
+        source: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        publishedAt: {
+            type: DataTypes.STRING,
+        },
+        author: {
+            type: DataTypes.STRING,
+        },
+        content: {
+            type: DataTypes.STRING,
         }
+
     });
 
     Note.associate = function(models) {
