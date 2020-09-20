@@ -6,7 +6,7 @@ const key = 'fd74db3423b5430780f46c67f89febb2';
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
-let day = date.getDate();   
+let day = date.getDate();
 let fullDay = `${year}-${month}-${day}`;
 require("dotenv").config()
 var passport = require("../config/passport");
@@ -44,13 +44,13 @@ module.exports = (app) => {
             });
         }
     });
-    
+
     app.get("/api/search", (req, res) => { //enter user keywork in q key
         axios.get(`http://newsapi.org/v2/top-headlines?country=us&language=en&category=technology&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
-        .then(data => res.json(data.data.articles))
-        .catch(err => res.json(err));
+            .then(data => res.json(data.data.articles))
+            .catch(err => res.json(err));
     });
-    
+
     app.post("/api/work", (req, res) => {
         db.Note.create({
             title: req.body.title,
@@ -75,10 +75,23 @@ module.exports = (app) => {
             title: req.body.title,
             body: req.body.body
         },
-        {
-            where: { url: req.body.url }
-        }).then((dbWork) => {
-            res.json(dbWork);
+            {
+                where: { url: req.body.url }
+            }).then((dbWork) => {
+                res.json(dbWork);
+            });
+    });
+
+    app.delete("/api/work/", (req, res) => {
+        console.log(req.body.url)
+
+        db.Note.destroy({
+            where: {
+                url: req.body.url
+            }
+        }).then((dbNote) => {
+            console.log(dbNote);
+
         });
     });
 }

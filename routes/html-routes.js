@@ -11,27 +11,28 @@ module.exports = (app) => {
             return;
         }
         res.sendFile(path.join(__dirname, "../public/signup.html"));
-      }
+    }
     );
-  
+
     app.get("/login", (req, res) => {
-      if (req.user) {
-        res.redirect("/notes");
-        return;
-      }
-      res.sendFile(path.join(__dirname, "../public/login.html"));
+        if (req.user) {
+            res.redirect("/notes");
+            return;
+        }
+        res.sendFile(path.join(__dirname, "../public/login.html"));
     });
-    
+
     app.get("/search", isAuthenticated, (req, res) => {
         res.render("search", {
             data: "hello search"
-        }) 
+        })
     });
 
     app.get("/notes", (req, res) => {
-        db.Note.findAll({where: {
-            UserId: req.user.id
-        }
+        db.Note.findAll({
+            where: {
+                UserId: req.user.id
+            }
         }).then(notes => {
             res.render("notes", {
                 data: notes
@@ -48,5 +49,7 @@ module.exports = (app) => {
     app.get("/work", isAuthenticated, (req, res) => {
         res.render("work");
     });
- 
+
+
+
 };
