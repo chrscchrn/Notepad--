@@ -1,3 +1,18 @@
 (() => {
-    console.log("nothing in notes, maybe use local storage and query strings to edit the notes");
+    
+    function saveLocal() {
+        localStorage.clear(); 
+        let i = 1;
+        
+        $.get("/notesdata").then(res => {
+            res.forEach( data => {
+                localStorage.setItem(`article${i}`, JSON.stringify(data));
+                i++;
+            })
+        }).catch(err => console.log(err));
+    }
+
+    $(function() {
+        saveLocal();
+    });
 })()

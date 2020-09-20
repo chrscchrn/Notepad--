@@ -5,15 +5,18 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = (app) => {
 
+    app.get("/signup", (req, res) => {
+        res.sendFile(path.join(__dirname, "../public/signup.html"));
+    });
+
     app.get("/", (req, res) => {
         if (req.user) {
             res.redirect("/notes");
             return;
         }
         res.sendFile(path.join(__dirname, "../public/signup.html"));
-    }
-    );
-
+    });
+  
     app.get("/login", (req, res) => {
         if (req.user) {
             res.redirect("/notes");
@@ -28,15 +31,27 @@ module.exports = (app) => {
         })
     });
 
-    app.get("/notes", (req, res) => {
+    app.get("/notes", isAuthenticated, (req, res) => {
         db.Note.findAll({
-            where: {
-                UserId: req.user.id
-            }
+            where: { UserId: req.user.id },
+            order: [ ['updatedAt', 'DESC'] ]
         }).then(notes => {
+            for (let i in notes) {
+                let location = parseInt(i);
+                notes[i].num = location + 1;
+            }
             res.render("notes", {
                 data: notes
             })
+        })
+    });
+
+    app.get("/notesdata", isAuthenticated, (req, res) => {
+        db.Note.findAll({
+            where: { UserId: req.user.id },
+            order: [ ['updatedAt', 'DESC'] ]
+        }).then(notes => {
+            res.json(notes);
         })
     });
 
