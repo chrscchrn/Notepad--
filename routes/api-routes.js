@@ -47,10 +47,20 @@ module.exports = (app) => {
     });
     
     app.get("/api/search", (req, res) => { //enter user keywork in q key
-        let category = "";
-        axios.get(`http://newsapi.org/v2/top-headlines?country=us&language=en&category=technology&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
-        .then(data => res.json(data.data.articles))
-        .catch(err => res.json(err));
+        if (!req.query.category) {
+            axios.get(`http://newsapi.org/v2/top-headlines?country=us&language=en&category=technology&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
+            .then(data => {
+                res.json(data.data.articles)   
+            })
+            .catch(err => res.json(err));
+        } else if (req.query.category) {
+            axios.get(`http://newsapi.org/v2/top-headlines?country=us&language=en&category=${req.query.category}&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
+            .then(data => {
+                res.json(data.data.articles)   
+            })
+            .catch(err => res.json(err));
+        }
+        
     });
     
     app.post("/api/work", (req, res) => {
