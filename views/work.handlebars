@@ -8,22 +8,41 @@
 This is the div that will have the object which holds the article. This one goes on the left and takes up pretty much
 half the page
 </div> --}}
+<div class="row">
+    <div class="col s12">
+        <h1 class="subHeader">Take Notes</h1>
+    </div>
+</div>
+
 <main class="main">
-<article class="work-article"> 
-    Articles
-</article>
-<aside class="work-notes">
-    
-    <textarea name="text" id="ca" cols="30" rows="10"></textarea>
-    
-</aside>
+    <div class="row">
+        <div class="col s1"></div>
+        <div class="col s5">
+            <article id="work-article"> 
+                <h4 id="loadTitle"></h4>
+                <h6 id="loadPublisher"></h6>
+                <h6 id="loadDate"></h6>
+                <h6 id="loadAuthor"></h6>
+                <article id="loadContent"></article>
+                <a id="loadURL">Link to Website</a>
+            </article>
+        </div>
+
+        <div class="col s5">
+            <aside id="work-notes">
+                <h4>Title</h4>
+                <textarea name="title" id="noteTitle" cols="30" rows="10"></textarea>
+                <h4>Note</h4>
+                <textarea name="text" id="noteBody" cols="30" rows="600"></textarea>
+                <button id="save">
+                    Save
+                </button>    
+            </aside>
+        </div>
+        <div class="col s1"></div>
+    </div>
 </main>
 
 
-{{!-- <div>
-    {{#each data}}
-        {{> work-notes}}
-    {{/each}}
-</div> --}}
 
 <script src="./js/work.js"></script>

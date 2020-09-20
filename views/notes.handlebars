@@ -1,18 +1,14 @@
-
+<h1 class="subHeader">Saved Notes</h1>
 <!-- div with previously held notes go here -->
 <div id="articles"></div>
 <link rel="stylesheet" href="css/notes.css">
 <link rel="stylesheet" href="css/headerFont.css">
 
- <div class="row1" style="padding-left: 60px">
-    <h2 class="note-title"> Title</h2>
-    <h3 class="note-textarea"  placeholder="">Notes</h3>
-</div>
 <div class="container">
     <div class="row1">
         
             {{#each data}}
-            {{> saved-notes}}
+                {{> saved-notes}}
             {{/each}}
   
     </div>

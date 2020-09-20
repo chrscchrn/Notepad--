@@ -1,36 +1,48 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+/* @import url('https://fonts.googleapis.com/css?family=Raleway:200'); */
+
+html {
+  font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
+}
 
 .row1 {
     display: flex;
     flex-direction: row;
-    
+    align-items: flex-start;
 }
 
-.fill {
-  align-items:center;
-  display:flex;
-  font-family:sans-serif;
-  height:100vh;
-  justify-content:center;
-  margin:0;
+.note-article {
+  background: white;
 }
-/* .notes {
-      padding-left: 20px;
-      color: black;
-      margin: 15px;
-      border: 1px black solid;
-      border-left: 6px solid #31376b;
-      border-radius: 10px;
-      animation: developers 2000ms ease-in; 
+
+/* .row-notes {
+  display: flex;
+  flex-direction: column;
 } */
-.note-title {
-  position: relative;
-  flex-grow: 1;
+
+.notes:hover {
+  background-color:#ffffff3d;
+  border: solid rgba(255, 127, 80, 0.329) 3px;
+  border-radius: 10px;
+  color: black;
 }
-.note-textarea {
-  position: relative;
-  flex-grow: 1;
-}
+
+
+
+/* .note {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-color: white;
+  background-image: url(../Images/icons/Pencil-48.png);
+  background-position: 9px 0px;
+  background-repeat: no-repeat;
+  border: solid 1px #000000;
+  border-radius: 6px;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 10px;
+} */
+  
+
 .container {
   padding: 30px;
   display: flex;
@@ -38,6 +50,68 @@
   justify-content: space-evenly;
 }
 
+
+.about {
+  --borderWidth: 3px;
+  background: white;
+  position: relative;
+  border-radius: var(--borderWidth);
+  margin-bottom: 40px;
+}
+.about:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad );
+  border-radius: calc(3 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 4s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+#savedURL {
+  color: #5073b8;
+}
+
+.notes {
+  margin-top: 20px;
+  padding: 20px 60px;
+  text-align: center;
+  --borderWidth: 3px;
+  background: rgb(255, 255, 249);
+  position: relative;
+  border-radius: 0px;
+  z-index: 1;
+  animation: developers 2000ms ease-in;
+}
 
 @keyframes developers{
 
