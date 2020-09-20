@@ -60,7 +60,6 @@ module.exports = (app) => {
             })
             .catch(err => res.json(err));
         }
-        
     });
     
     app.post("/api/work", (req, res) => {

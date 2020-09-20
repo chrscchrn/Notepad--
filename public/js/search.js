@@ -7,13 +7,15 @@
     $searchButton.on("click", event => {
         event.preventDefault();
         localStorage.clear();
-        let category = $('#category').val(); //send to back end to put into api
+        
+        //send to back end to put into api
+        let category = $('#category').val();
+
         // clear any previous search results
         $(".article-div").remove();
-        
-        //do keyword input
 
         let instr = $("<h5>").text("Click Article Title to Start Taking Notes.");
+
         //localStorage number
         let i = 1;
 

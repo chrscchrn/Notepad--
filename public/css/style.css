@@ -54,9 +54,8 @@ footer {
 }
 
 .subHeader {
-    width: 50%;
-    position: relative;
-    right: -35%;
+    justify-content: center;
+    text-align: center;
 }
 
 .login {

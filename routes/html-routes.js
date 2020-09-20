@@ -31,11 +31,15 @@ module.exports = (app) => {
         }) 
     });
 
-    app.get("/notes", (req, res) => {
+    app.get("/notes", isAuthenticated, (req, res) => {
         db.Note.findAll({
             where: { UserId: req.user.id },
             order: [ ['updatedAt', 'DESC'] ]
         }).then(notes => {
+            for (let i in notes) {
+                console.log(notes[i], "BETWEEN");
+            }
+
             res.render("notes", {
                 data: notes
             })
