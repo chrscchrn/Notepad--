@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const elements = Array.from(document.querySelectorAll('.fill'));
 
 function fill(item, index) {
@@ -16,3 +17,23 @@ function fill(item, index) {
 }
 
 elements.forEach(fill);
+=======
+(() => {
+    
+    function saveLocal() {
+        localStorage.clear(); 
+        let i = 1;
+        
+        $.get("/notesdata").then(res => {
+            res.forEach( data => {
+                localStorage.setItem(`article${i}`, JSON.stringify(data));
+                i++;
+            })
+        }).catch(err => console.log(err));
+    }
+
+    $(function() {
+        saveLocal();
+    });
+})()
+>>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a

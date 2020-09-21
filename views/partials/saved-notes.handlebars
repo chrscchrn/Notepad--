@@ -1,5 +1,5 @@
 <div class="notes fill">
-    <a href="/work">
+    <a href="/work?num={{num}}">
         <article class="note-textarea" placeholder="">
             <h5 class="note-title">
                 <strong>{{this.dataValues.title}} - Click to Edit</strong>
@@ -7,7 +7,9 @@
             
             <strong>{{this.dataValues.article}}</strong>
             </br>
-            <a id="savedURL" href="{{this.dataValues.url}}">Link to Article Website</a>
+            <a id="savedURL" href="{{this.dataValues.url}}">Link to Article Wesbite</a>
+            </br>
+            <a id="savedURL">Delete this Note</a>
         </article>
     </a>
 </div>
