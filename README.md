@@ -8,7 +8,7 @@ As a student, developer or researcher, I want to have an all-in-one resource man
 
 ## Usage
 
-### To Test Application use there Credentials (or sign up)
+### To Test Application use this Credential (or sign up)
 LOGIN: example@notepad.com
 PASSWORD: notepad
 
