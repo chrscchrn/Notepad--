@@ -2,11 +2,18 @@
 
 html {
   font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
+  overflow: hidden;
 }
 .container {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.textP {
+  font-size: 1rem;
+  justify-content: center;
+  text-align: center;
 }
 
 .row {
@@ -49,7 +56,7 @@ html {
 .text {
   display: flex;
   justify-content: baseline;
-  margin-bottom: 20px;
+    
 }
 
 a {
@@ -57,9 +64,9 @@ a {
   font-size: 22px;
   color: black;
 }
-.notes-about {
+/* .notes-about {
   margin: 30px;
-}
+} */
 .brand-logo {
   height: 20px;
 }

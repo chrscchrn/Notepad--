@@ -12,7 +12,7 @@ html {
 
 .notes:hover {
   background-color:#ffffff3d;
-  border: solid rgba(255, 127, 80, 0.329) 3px;
+  border: solid #49508d 3px;
   border-radius: 10px;
   color: black;
 }
