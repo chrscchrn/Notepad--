@@ -1,20 +1,10 @@
-
-<div class="row">
-    <div class="col s4">
-    </div>
-    <div class="col s4">
-        <h3 class="subHeader">Saved Notes</h3>
-    </div>
-    <div class="col s4">
-    </div>
-</div>
-<!-- div with previously held notes go here -->
+<h3 class="subHeader">Saved Notes</h3>
 <div id="articles"></div>
 <link rel="stylesheet" href="css/notes.css">
 <link rel="stylesheet" href="css/headerFont.css">
 
 <div class="container">
-    <div class="row1 fill">
+    <div class="row">
         
             {{#each data}}
                 {{> saved-notes}}
@@ -24,3 +14,4 @@
 </div>
 
 <script type="text/javascript" src="./js/notes.js"></script>
+<script type="text/javascript" src="./js/notes-fill.js"></script>

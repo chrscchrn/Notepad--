@@ -12,7 +12,7 @@ html {
     font-size: 16px;
     line-height: 1.5;
     background: rgb(255, 250, 250);
-    font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
+    font-family: "Montserrat", "Droid Sans", "Arial", "Helvetica Neue";
     box-sizing: border-box;
     background-color: #fff;
     background-image:
@@ -31,7 +31,6 @@ nav .nav-wrapper {
     
 }
 
-<<<<<<< HEAD
 html {
     font-size: 16px;
     line-height: 1.5;
@@ -43,16 +42,6 @@ html {
     linear-gradient(90deg, transparent 179px, #abced4 79px, #abced4 181px, transparent 181px),
     linear-gradient(#eee .1em, transparent .1em);
     background-size: 100% 1.2em;
-=======
-nav ul a {
-    -webkit-transition: background-color .3s;
-    transition: background-color .3s;
-    font-size: 1rem;
-    color: blue;
-    display: block;
-    padding: 0 15px;
-    cursor: pointer;
->>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
 }
 
 main {
@@ -71,21 +60,24 @@ footer {
     border-bottom: 2px solid #72276d80;
 }
 
-<<<<<<< HEAD
 nav .nav-wrapper {
     position: relative;
     height: 100%;
-    background-color:rgb(235, 131, 90);
+    background-color: coral;
 }
 #content {
     display: flex;
-=======
-.subHeader {
->>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
     justify-content: center;
     text-align: center;
 }
-
+.logo {
+  margin: 6px;
+  height: 55px;
+  width: 250px;
+}
+#intro {
+  text-align: center;
+}
 .login {
     padding-left: 40px;
     padding-right: 40px;
@@ -123,32 +115,6 @@ nav .nav-wrapper {
   text-decoration: none;
 }
 
-/*btn_background*/
-.effect01 {
-  color: #FFF;
-  border: 4px solid #000;
-  box-shadow:0px 0px 0px 1px #000 inset;
-  background-color: #000;
-  overflow: hidden;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-}
-.effect01:hover {
-  border: 4px solid #666;
-  background-color: #FFF;
-  box-shadow:0px 0px 0px 4px #EEE inset;
-}
-
-/*btn_text*/
-.effect01 span {
-  transition: all 0.2s ease-out;
-  z-index: 2;
-}
-.effect01:hover span{
-  letter-spacing: 0.13em;
-  color: #333;
-    background-color: rgb(255, 162, 129);
-}
 
 .article-div-color {
     background-color: transparent;
@@ -163,82 +129,6 @@ nav .nav-wrapper {
     padding-bottom: 15px;
 }
 
-/*highlight*/
-.effect01:after {
-  background: #FFF;
-  border: 0px solid #000;
-  content: "";
-  height: 155px;
-  left: -75px;
-  opacity: .8;
-  position: absolute;
-  top: -50px;
-  -webkit-transform: rotate(35deg);
-          transform: rotate(35deg);
-  width: 50px;
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
-  z-index: 1;
-}
-.effect01:hover:after {
-  background: #FFF;
-  border: 20px solid #000;
-  opacity: 0;
-  left: 120%;
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
-}
-/* .btn {
-  
-  background: coral;
-
-} */
-
-.transition-fade {
-    transition: 0.8s;
-    opacity: 1;
-}
-  
-  html.is-animating .transition-fade {
-    opacity: 0;
-  }
-
-  .about {
-      margin-top: 20px;
-      margin-left: 20px;
-      margin-right: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    --borderWidth: 3px;
-    background: white;
-    position: relative;
-    border-radius: var(--borderWidth);
-  }
-  .about:after {
-    content: '';
-    position: absolute;
-    top: calc(-1 * var(--borderWidth));
-    left: calc(-1 * var(--borderWidth));
-    height: calc(100% + var(--borderWidth) * 2);
-    width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(60deg, #F79533, #F37055, #EF4E7B, #A166AB, #5073B8, #1098AD, #07B39B, #6FBA82);
-    border-radius: calc(3 * var(--borderWidth));
-    z-index: -1;
-    animation: animatedgradient 4s ease alternate infinite;
-    background-size: 300% 300%;
-  }
-  @keyframes animatedgradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-<<<<<<< HEAD
   h3 {
     text-align: center;
   }
@@ -252,65 +142,12 @@ nav .nav-wrapper {
     -webkit-transition: background-color .3s;
     transition: background-color .3s;
     font-size: 1rem;
-    color: blue;
     display: block;
     padding: 0 15px;
     cursor: pointer;
 }
-.cssans__word {
-  padding-top: 12px;
-  padding-left: 10px;
-  font-size: 1vh;
-  position: fixed;
-}
-
-/* we can use high */
-.highlight {
-  display: inline;
-  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #FFD0AE 70%);
-  }
-.sidenav {
-  color: white;
+.sidenav-bg {
+  text-emphasis-color: white;
   background-color: coral;
-=======
-#title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 0.8;
-    align-self: center;
-    text-align: center;
-}
-
-#intro {
-    font-size: 1.8rem;
-    line-height: 1.2;
-    text-align: center;
-}
-
-#introDiv {
-    align-content: center;
-    grid-area: intro;
-    width: 50%;
-    height: 100%;
-    position: relative;
-    right: -25%;
-}
-
-#readArticle {
-    width: 50%;
-    right: 50%
-}
-
-#typeNotes {
-    width: 50%;
-}
-
-#content {
-    display: flex;
-    justify-content: center;
-    grid-area: content;
-    font-size: 1.6rem;
-    line-height: 1.4;
-    text-align: center;
->>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
+  height: 100vh;
 }
