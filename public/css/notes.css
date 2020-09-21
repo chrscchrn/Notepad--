@@ -1,7 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css?family=Raleway:200'); */
 
 html {
-  font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
+  font-family: "Montserrat", "Droid Sans", "Arial", "Helvetica Neue";
 }
 
 .row1 {
@@ -10,38 +10,12 @@ html {
     align-items: flex-start;
 }
 
-.note-article {
-  background: white;
-}
-
-/* .row-notes {
-  display: flex;
-  flex-direction: column;
-} */
-
 .notes:hover {
   background-color:#ffffff3d;
   border: solid rgba(255, 127, 80, 0.329) 3px;
   border-radius: 10px;
   color: black;
 }
-
-
-
-/* .note {
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  background-color: white;
-  background-image: url(../Images/icons/Pencil-48.png);
-  background-position: 9px 0px;
-  background-repeat: no-repeat;
-  border: solid 1px #000000;
-  border-radius: 6px;
-  line-height: 18px;
-  overflow: hidden;
-  padding: 10px;
-} */
-  
 
 .container {
   padding: 30px;
@@ -93,11 +67,12 @@ html {
 
 a {
   text-decoration: none;
-  font-size: 22px;
+  font-size: 1.8vw;
   color: black;
 }
 
 #savedURL {
+  font-size: 1.8vw;
   color: #5073b8;
 }
 
@@ -110,7 +85,7 @@ a {
   position: relative;
   border-radius: 0px;
   z-index: 1;
-  animation: developers 2000ms ease-in;
+  animation: developers 1000ms ease-in;
 }
 
 @keyframes developers{
@@ -141,24 +116,23 @@ a {
   background-color: #fff;
   box-sizing: border-box;
   display: flex;
-  font-size: 4vmin;
-  height: 20vmin;
+  height: 30vmin;
   justify-content: center;
   margin: 1vmin;
   padding: 3vmin;
   width: 200vmin;
 }
 .row1 .notes:nth-child(1) {
-  background-color: rgba(51, 10, 24, 0.5);
+  background-color: rgba(243, 177, 55, 0.5);
 }
 .row1 .notes:nth-child(2) {
-  background-color: rgba(238, 238, 0, 0.5);
+  background-color: rgba(54, 231, 47, 0.5);
 }
 .row1 .notes:nth-child(3) {
-  background-color: rgba(102, 204, 51, 0.5);
+  background-color: rgba(228, 54, 205, 0.5);
 }
 .row1 .notes:nth-child(4) {
-  background-color: rgba(102, 204, 255, 0.5);
+  background-color: rgba(39, 179, 248, 0.5);
 }
 /* fill styles */
 .fill-layer {

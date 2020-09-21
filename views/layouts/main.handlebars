@@ -6,15 +6,17 @@
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/headerFont.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-	<script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
-	<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script  src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 </head>
 
 	<body>
 		<nav>
 			<div class="nav-wrapper">
-				<a href="" class="brand-logo">
+				<a href="#" class="brand-logo">
 				<div class="cssans__word">
 				<b class="cssans:N"></b>
 				<b class="cssans:o"></b>
@@ -43,11 +45,17 @@
 		<li><a href="/work">Work</a></li>
 		<li><a href="/search">Search</a></li>
 		<li><a href="/about">Developer info</a></li>
+		<li><a href="/logout">Logout</a></li>
   </ul>
 		
-		<main id="swup" class="transition-fade">
 		{{{ body }}}
-		</main>
+		
+		<script>
+		 $(document).ready(function(){
+    	$('.sidenav').sidenav();
+  		});
+		</script>
 		<script src="js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	</body>
 </html>
