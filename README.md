@@ -1,46 +1,53 @@
-# The Hard Times
+# Notepad --
 
 ## Description
 The all-in-one resource organizer for students and researchers. Here the user can take look up articles and take notes on them while being able to save it all in one place. No more copying down URLs, just bookmark the page and the notes will be saved with them.
 
-### motivation
+## Motivation
 As a student, developer or researcher, I want to have an all-in-one resource manager so that I can stay organized, keep track of helpful articles, and keep track of the notes I took. 
 
-<!-- ### Results -->
+## Usage
 
-<!-- ## User-Stories -->
+### To Test Application use there Credentials (or sign up)
+LOGIN: example@notepad.com
+PASSWORD: notepad
+
+### Usage
+After logging in, the user is directed to the main page, where they can browse previously saved notes. To edit or delete them, they must click on the 
+title. The user can also expect to browse current news by clicking on the search button on the navigation bar. Choose from various categories then results will appear. Clicking on a articles title will lead the user to the note-taking page. Because this application is for the purpose of demonstrating value full news content is not avaliable. 
+
+## Preview
+<img src="./Screenshots/login.png" alt="Notepad--">
+<img src="./Screenshots/notes.png" alt="Notepad--">
+<img src="./Screenshots/edit.png" alt="Notepad--">
+<img src="./Screenshots/search.png" alt="Notepad--">
 
 ## Breakdown of Tasks
+Design
+ - Gio: About Page, Routes for this page, Design
 
-General Front-End:
- - Gio: About Page, Routes for this page. Design
- - Maverick: Full-Stack, 
+Authentication
+ - Maverick: PassportJS 
+
+Full-Stack
+ - Christoper: Sequelize, Font + Back interaction, DOM Manipulation, UI
 
 Back-End
- - Chloe: routes, News API
- - Christoper: Sequelize, font+back interaction, Design
-
-
-## Idea to MVP
-MVP-Uno: Bring in articles from News API and show the in the front page. User can also select articles based on search, most popular, certain indutry. Once article is picked, allow user to take notes while reading. Save notes to SQL. Make everything load when it refreshes.
+ - Chloe: Back-end, NEWS API
 
 ## Technologies Used
  - News API lib
  - Jquery
  - Node.js
- - Express.js & handlebars
+ - Express.js & Handlebars
  - three.js
  - Sequelize ORM
- - CSS imports for fonts
+ - PassportJS
 
 ## Installation
+ - npm i
 
- - npm install newsapi
-
-# projectDos
-
-# Database
-
+## Database
 Sequelize is used throughout this project. While it is not needed, the sequelize cli is very useful for setting up your local development environment:
 
 ```bash
@@ -55,3 +62,6 @@ DB_USERNAME=
 DB_PASSWORD=
 DB_NAME=
 ```
+
+## License
+MIT 

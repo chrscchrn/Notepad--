@@ -23,7 +23,6 @@
           email: email,
           password: password
         }).then(() => {
-            console.log("trying to login")
             window.location.replace("/notes");
         }).catch(err => {
             console.log(err);

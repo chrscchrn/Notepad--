@@ -8,7 +8,7 @@ const key = 'fd74db3423b5430780f46c67f89febb2';
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
-let day = date.getDate();   
+let day = date.getDate();
 month++;
 let fullDay = `${year}-${month}-${day}`;
 
@@ -45,20 +45,34 @@ module.exports = (app) => {
             });
         }
     });
-    
+
     app.get("/api/search", (req, res) => { //enter user keywork in q key
-        let category = "";
-        axios.get(`http://newsapi.org/v2/top-headlines?country=us&language=en&category=technology&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
-        .then(data => res.json(data.data.articles))
-        .catch(err => res.json(err));
+        if (!req.query.category) {
+            axios.get(`http://newsapi.org/v2/top-headlines?country=us&language=en&category=technology&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
+                .then(data => {
+                    res.json(data.data.articles)
+                })
+                .catch(err => res.json(err));
+        } else if (req.query.category) {
+            axios.get(`http://newsapi.org/v2/top-headlines?country=us&language=en&category=${req.query.category}&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
+                .then(data => {
+                    res.json(data.data.articles)
+                })
+                .catch(err => res.json(err));
+        }
     });
-    
+
     app.post("/api/work", (req, res) => {
+        console.log(req.body);
         db.Note.create({
-            title: req.body.title,
+            noteTitle: req.body.noteTitle,
             body: req.body.body,
             url: req.body.url,
-            article: req.body.article,
+            title: req.body.title,
+            source: req.body.source,
+            publishedAt: req.body.publishedAt,
+            author: req.body.author,
+            content: req.body.content,
             UserId: req.user.id
         }).then((dbWork) => {
             res.json(dbWork);
@@ -74,13 +88,26 @@ module.exports = (app) => {
 
     app.put("/api/work/update", (req, res) => {
         db.Note.update({
-            title: req.body.title,
+            noteTitle: req.body.noteTitle,
             body: req.body.body
         },
-        {
-            where: { url: req.body.url }
-        }).then((dbWork) => {
-            res.json(dbWork);
+            {
+                where: { url: req.body.url }
+            }).then((dbWork) => {
+                res.json(dbWork);
+            });
+    });
+
+    app.delete("/api/work/", (req, res) => {
+        console.log(req.body.url)
+
+        db.Note.destroy({
+            where: {
+                url: req.body.url
+            }
+        }).then((dbNote) => {
+            console.log(dbNote);
+
         });
     });
 }
