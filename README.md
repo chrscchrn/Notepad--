@@ -12,6 +12,8 @@ As a student, developer or researcher, I want to have an all-in-one resource man
 LOGIN: example@notepad.com
 PASSWORD: notepad
 
+[Live Demo](https://oscarcat.herokuapp.com/)
+
 ### Usage
 After logging in, the user is directed to the main page, where they can browse previously saved notes. To edit or delete them, they must click on the 
 title. The user can also expect to browse current news by clicking on the search button on the navigation bar. Choose from various categories then results will appear. Clicking on a articles title will lead the user to the note-taking page. Because this application is for the purpose of demonstrating value and proof of concept full news content is not avaliable. 
