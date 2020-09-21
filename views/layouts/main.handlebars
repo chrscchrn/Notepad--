@@ -44,12 +44,17 @@
 		<li><a href="/work">Work</a></li>
 		<li><a href="/search">Search</a></li>
 		<li><a href="/about">Developer info</a></li>
+		<li><a href="/logout">Logout</a></li>
   </ul>
-
-	<main id="swup" class="transition-fade">
-	{{{ body }}}
-	</main>
-	
-	<script src="js/main.js"></script>
-</body>
+		
+		{{{ body }}}
+		
+		<script>
+		 $(document).ready(function(){
+    	$('.sidenav').sidenav();
+  		});
+		</script>
+		<script src="js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</body>
 </html>
