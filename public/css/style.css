@@ -31,7 +31,6 @@ nav .nav-wrapper {
     
 }
 
-<<<<<<< HEAD
 html {
     font-size: 16px;
     line-height: 1.5;
@@ -43,16 +42,6 @@ html {
     linear-gradient(90deg, transparent 179px, #abced4 79px, #abced4 181px, transparent 181px),
     linear-gradient(#eee .1em, transparent .1em);
     background-size: 100% 1.2em;
-=======
-nav ul a {
-    -webkit-transition: background-color .3s;
-    transition: background-color .3s;
-    font-size: 1rem;
-    color: blue;
-    display: block;
-    padding: 0 15px;
-    cursor: pointer;
->>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
 }
 
 main {
@@ -71,17 +60,7 @@ footer {
     border-bottom: 2px solid #72276d80;
 }
 
-<<<<<<< HEAD
-nav .nav-wrapper {
-    position: relative;
-    height: 100%;
-    background-color:rgb(235, 131, 90);
-}
-#content {
-    display: flex;
-=======
 .subHeader {
->>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
     justify-content: center;
     text-align: center;
 }
@@ -238,41 +217,6 @@ nav .nav-wrapper {
     }
   }
 
-<<<<<<< HEAD
-  h3 {
-    text-align: center;
-  }
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-  }
-  nav ul a {
-    -webkit-transition: background-color .3s;
-    transition: background-color .3s;
-    font-size: 1rem;
-    color: blue;
-    display: block;
-    padding: 0 15px;
-    cursor: pointer;
-}
-.cssans__word {
-  padding-top: 12px;
-  padding-left: 10px;
-  font-size: 1vh;
-  position: fixed;
-}
-
-/* we can use high */
-.highlight {
-  display: inline;
-  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #FFD0AE 70%);
-  }
-.sidenav {
-  color: white;
-  background-color: coral;
-=======
 #title {
     font-size: 1.8rem;
     font-weight: 700;
@@ -312,5 +256,4 @@ nav .nav-wrapper {
     font-size: 1.6rem;
     line-height: 1.4;
     text-align: center;
->>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
 }

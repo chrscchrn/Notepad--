@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const elements = Array.from(document.querySelectorAll('.fill'));
 
 function fill(item, index) {
@@ -17,7 +16,7 @@ function fill(item, index) {
 }
 
 elements.forEach(fill);
-=======
+
 (() => {
     
     function saveLocal() {
@@ -36,4 +35,3 @@ elements.forEach(fill);
         saveLocal();
     });
 })()
->>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
