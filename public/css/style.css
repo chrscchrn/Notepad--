@@ -1,26 +1,62 @@
 nav {
     margin-bottom: 30px;
 }
-/* html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
+
+ html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
 table { border-collapse: collapse; border-spacing: 0; }
 th, td { text-align: left; vertical-align: top; }
 h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
-img { border: 0; } */
-.title {
-    display: flex;
-    justify-content: center;
-}
+img { border: 0; }
 
 html {
     font-size: 16px;
     line-height: 1.5;
-    background: #ffffff;
+    background: rgb(255, 250, 250);
     font-family: "Avenir Next", "Droid Sans", "Arial", "Helvetica Neue";
     box-sizing: border-box;
+    background-color: #fff;
+    background-image:
+    linear-gradient(90deg, transparent 179px, #abced4 79px, #abced4 181px, transparent 181px),
+    linear-gradient(rgb(226, 226, 226) .1em, transparent .1em);
+    background-size: 100% 1.8em;
 }
 
-body {
-    align-content: center;
+nav {
+    margin-bottom: 30px;
+}
+
+nav .nav-wrapper {
+    position: relative;
+    background-color:rgb(255, 175, 146);
+    
+}
+
+<<<<<<< HEAD
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    background: rgb(255, 250, 250);
+    font-family: "Montserrat", "Droid Sans", "Arial", "Helvetica Neue";
+    box-sizing: border-box;
+    background-color: #fff;
+    background-image:
+    linear-gradient(90deg, transparent 179px, #abced4 79px, #abced4 181px, transparent 181px),
+    linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+=======
+nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: blue;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+>>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
+}
+
+main {
+    align-items: center;
 }
 
 footer {
@@ -29,49 +65,27 @@ footer {
     margin: auto;
 }
 
-#title {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 0.8;
-    align-self: center;
-    text-align: center;
+.titleDiv {
+    margin-top: 10px;
+    padding: 8px;
+    border-bottom: 2px solid #72276d80;
 }
 
-#intro {
-    font-size: 2rem;
-    line-height: 1.4;
-    text-align: center;
-    align-self: center;
-}
-
-#introDiv {
-    grid-area: intro;
-    width: 100%;
-    height: 100%;
-}
-
-#readArticle {
-    width: 50%;
-    right: 50%
-}
-
-#typeNotes {
-    width: 50%;
-}
-
+<<<<<<< HEAD
 nav .nav-wrapper {
     position: relative;
     height: 100%;
-    background-color:ivory;
+    background-color:rgb(235, 131, 90);
 }
 #content {
     display: flex;
+=======
+.subHeader {
+>>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
     justify-content: center;
-    grid-area: content;
-    font-size: 1.5rem;
-    line-height: 1.4;
     text-align: center;
 }
+
 .login {
     padding-left: 40px;
     padding-right: 40px;
@@ -79,7 +93,8 @@ nav .nav-wrapper {
     width: 500px;
     border: .5px solid black;
     border-radius: 25px;
-    border-top: 5px solid gray;
+    border-top: 5px solid rgb(51, 51, 51);
+    background-color: rgba(255, 255, 255, 0.315);
 }
 
 .signup {
@@ -89,23 +104,106 @@ nav .nav-wrapper {
     width: 500px;
     border: .5px solid black;
     border-radius: 25px;
-    border-top: 5px solid gray;
+    border-top: 5px solid rgb(51, 51, 51);
+    background-color: rgba(255, 255, 255, 0.315);
+}
+.btn {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn:hover {
+  text-decoration: none;
 }
 
-.btn {
-    background-color: coral;
+/*btn_background*/
+.effect01 {
+  color: #FFF;
+  border: 4px solid #000;
+  box-shadow:0px 0px 0px 1px #000 inset;
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
+.effect01:hover {
+  border: 4px solid #666;
+  background-color: #FFF;
+  box-shadow:0px 0px 0px 4px #EEE inset;
+}
+
+/*btn_text*/
+.effect01 span {
+  transition: all 0.2s ease-out;
+  z-index: 2;
+}
+.effect01:hover span{
+  letter-spacing: 0.13em;
+  color: #333;
+    background-color: rgb(255, 162, 129);
+}
+
+.article-div-color {
+    background-color: transparent;
+    border-top: rgb(39, 39, 39) 2px solid;
+}
+
+.article-div {
+    font-size: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/*highlight*/
+.effect01:after {
+  background: #FFF;
+  border: 0px solid #000;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .8;
+  position: absolute;
+  top: -50px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  width: 50px;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+  z-index: 1;
+}
+.effect01:hover:after {
+  background: #FFF;
+  border: 20px solid #000;
+  opacity: 0;
+  left: 120%;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+/* .btn {
+  
+  background: coral;
+
+} */
 
 .transition-fade {
     transition: 0.8s;
     opacity: 1;
-  }
+}
   
   html.is-animating .transition-fade {
     opacity: 0;
   }
 
   .about {
+      margin-top: 20px;
       margin-left: 20px;
       margin-right: 20px;
       padding-top: 20px;
@@ -140,11 +238,9 @@ nav .nav-wrapper {
     }
   }
 
-  .cssans__word {
-      padding-top: 12px;
-      padding-left: 10px;
-      font-size: 1vh;
-      position: fixed;
+<<<<<<< HEAD
+  h3 {
+    text-align: center;
   }
   .footer {
     position: absolute;
@@ -160,4 +256,61 @@ nav .nav-wrapper {
     display: block;
     padding: 0 15px;
     cursor: pointer;
+}
+.cssans__word {
+  padding-top: 12px;
+  padding-left: 10px;
+  font-size: 1vh;
+  position: fixed;
+}
+
+/* we can use high */
+.highlight {
+  display: inline;
+  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #FFD0AE 70%);
+  }
+.sidenav {
+  color: white;
+  background-color: coral;
+=======
+#title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 0.8;
+    align-self: center;
+    text-align: center;
+}
+
+#intro {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+#introDiv {
+    align-content: center;
+    grid-area: intro;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    right: -25%;
+}
+
+#readArticle {
+    width: 50%;
+    right: 50%
+}
+
+#typeNotes {
+    width: 50%;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    grid-area: content;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    text-align: center;
+>>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
 }

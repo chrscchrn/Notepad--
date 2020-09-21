@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/headerFont.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+   
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="" class="brand-logo">
-            <div class="cssans__word">
+    <div class="cssans cssans--center titleDiv" >
+        <div class="cssans__accessible"></div>
+    
+        <div class="cssans__word" id="title">
             <b class="cssans:N"></b>
             <b class="cssans:o"></b>
             <b class="cssans:t"></b>
@@ -23,15 +24,8 @@
             <b class="cssans:d"></b>
             <b class="cssans:-"></b>
             <b class="cssans:-"></b>
-        </div></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="/notes">Notes</a></li>
-                <li><a href="/work">Work</a></li>
-                <li><a href="/search">Search</a></li>
-                <li><a href="/about">Developer info</a></li>
-              </ul>
         </div>
-      </nav>
+    </div>
 
     <div id="introDiv">
         <p id="intro">
@@ -39,28 +33,27 @@
         </p>
     </div>
     <section id="content">
-        <div>
-            <div>
+        <div class="row">
+            <div class="col s12">
                 <form class="login">
-                    <h2 class="log">Login</h2>
+                    <h3 class="log highlight">Login</h3>
                     <div class="form-group">
-                        <!-- <label for="exampleInputEmail1">Email address</label> -->
+                        <!-- <label for="exampleInputEmail1"></label> -->
                         <input type="email" class="form-control" id="email-input" placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <!-- <label for="exampleInputPassword1">Password</label> -->
+                        <!-- <label for="exampleInputPassword1"></label> -->
                         <input type="password" class="form-control" id="password-input" placeholder="Password">
                     </div>
                     
-                    <button type="submit" class="btn orange accent-3 btn-default">Login</button>
+                    <button type="submit" class="btn effect01 orange accent-3 btn-default">Login</button>
                 </form>
-                <br />
                 <p>Or sign up <a href="/">here</a></p>
+                <a href="/about">Developer info</a>
             </div>
         </div>
-
-    </section>
+        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="./js/login.js"></script>
 </body>
 </html>

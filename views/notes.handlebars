@@ -1,41 +1,25 @@
-<h1>Notes</h1>
+
+<div class="row">
+    <div class="col s4">
+    </div>
+    <div class="col s4">
+        <h3 class="subHeader">Saved Notes</h3>
+    </div>
+    <div class="col s4">
+    </div>
+</div>
 <!-- div with previously held notes go here -->
 <div id="articles"></div>
-<script type="text/javascript" src="/notes.js"></script>
 <link rel="stylesheet" href="css/notes.css">
 <link rel="stylesheet" href="css/headerFont.css">
 
-    
-      <div class="container">
-       
-        <div class="row1">
-          {{!-- <div><article class="note-article" placeholder="Note article"></article></div> --}}
-          
-          <div class="row-notes">
-            {{!-- <div class="notes">
-              <p><strong><article class="note-title" placeholder="Note Title" maxlength="28" type="text"></strong> 
-                <article class="note-textarea" placeholder=""></article></p>
-            </div>
-            
-            <div class="notes">
-              <p><strong><article class="note-title" placeholder="Note Title" maxlength="28" type="text"></strong> 
-                <article class="note-textarea" placeholder=""></article></p>
-            </div>
-            <div class="notes">
-              <p><strong><article class="note-title" placeholder="Note Title" maxlength="28" type="text"></strong> 
-                <article class="note-textarea" placeholder=""></article></p>
-            </div> --}}
-          </div>
-        </div>
-      </div>
-
 <div class="container">
-    <div class="row">
-        <div class="row-notes">
+    <div class="row1 fill">
+        
             {{#each data}}
-            {{> saved-notes}}
+                {{> saved-notes}}
             {{/each}}
-        </div>
+  
     </div>
 </div>
 

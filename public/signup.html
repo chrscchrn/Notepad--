@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="" class="brand-logo">
-            <div class="cssans__word">
+    <div class="cssans cssans--center titleDiv">
+        <div class="cssans__accessible"></div>
+    
+        <div class="cssans__word" id="title">
             <b class="cssans:N"></b>
             <b class="cssans:o"></b>
             <b class="cssans:t"></b>
@@ -23,55 +23,49 @@
             <b class="cssans:d"></b>
             <b class="cssans:-"></b>
             <b class="cssans:-"></b>
-        </div></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="/notes">Notes</a></li>
-                <li><a href="/work">Work</a></li>
-                <li><a href="/search">Search</a></li>
-                <li><a href="/about">Developer info</a></li>
-              </ul>
         </div>
-      </nav>
+    </div>
+
     <div id="introDiv">
         <p id="intro">
             Reducing tabs, windows, and clutter to one, easy to use website. Search or browse for current events or scholarly journals and take notes as your reading. 
         </p>
     </div>
-    <section id="rightPanel"></section>
-    <section id="leftPanel"></section>
     <section id="content">
-        <div>
-            <div>
-                <h3>
-                    Signup
-                </h3>
+        <div class="row">
+            <div class="col 12">
                 <form class="signup">
+                    <h3>
+                        Signup
+                    </h3>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <!-- <label for="exampleInputEmail1"></label> -->
                         <input type="email" class="form-control" id="email-input" placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
+                        <!-- <label for="exampleInputPassword1"></label> -->
                         <input type="password" class="form-control" id="password-input" placeholder="Password">
                     </div>
                     <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                         <span class="sr-only">Error:</span> <span class="msg"></span>
                     </div>
-                    <button type="submit" class="btn btn-default">Sign Up</button>
+<<<<<<< HEAD
+                    <button type="submit" class="btn effect01 btn-default">Sign Up</button>
                   </form>
                   <br />
                   <!-- change to route -->
                 <p>Or login here <a href="/login">here</a></p>
+=======
+                    <button type="submit" class="btn orange accent-3 btn-default">Sign Up</button>
+                    </form>
+                <p>Or login <a href="/login">here</a></p>
+                <a href="/about">Developer info</a>
+>>>>>>> ef677b6f7da58428956abe330bc51691ea9bb91a
             </div>
         </div>
-    </section>
-    <footer class="footer">
-        <div >
-            <p>   Christopher || Gio || Chloe || Maverick  </p>
-        </div>
-    </footer>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/signup.js"></script>
+    <script type="text/javascript" src="./js/signup.js"></script>
 </body>
 </html>
