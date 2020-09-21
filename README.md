@@ -26,13 +26,13 @@ title. The user can also expect to browse current news by clicking on the search
 
 ## Breakdown of Tasks
 Design
- - Gio: About Page, Routes for this page, Design
+ - Gio: front-end, Routes for this page, UI Design
 
 Authentication
  - Maverick: PassportJS 
 
 Full-Stack
- - Christoper: Sequelize, Font + Back interaction, DOM Manipulation, UI
+ - Christoper: Sequelize, Front + Back interaction, DOM Manipulation, UI
 
 Back-End
  - Chloe: Back-end, NEWS API
@@ -42,7 +42,7 @@ Back-End
  - Jquery
  - Node.js
  - Express.js & Handlebars
- - three.js
+ - Materialize
  - Sequelize ORM
  - PassportJS
 
