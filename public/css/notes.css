@@ -24,42 +24,6 @@ html {
   justify-content: space-evenly;
 }
 
-
-.about {
-  --borderWidth: 3px;
-  background: white;
-  position: relative;
-  border-radius: var(--borderWidth);
-  margin-bottom: 40px;
-}
-.about:after {
-  content: '';
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad );
-  border-radius: calc(3 * var(--borderWidth));
-  z-index: -1;
-  animation: animatedgradient 4s ease alternate infinite;
-  background-size: 300% 300%;
-}
-
-
-@keyframes animatedgradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-
 .title {
   color: grey;
   font-size: 18px;
@@ -67,12 +31,12 @@ html {
 
 a {
   text-decoration: none;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   color: black;
 }
 
 #savedURL {
-  font-size: 1.8vw;
+  font-size: 1vw;
   color: #5073b8;
 }
 
@@ -98,40 +62,33 @@ a {
   }
 }
 
-.cssans__word {
-  padding-top: 12px;
-  padding-left: 10px;
-  font-size: 1vh;
-  position: fixed;
-}
-
-.row1 {
+/* .row {
   display: flex;
   flex-wrap: wrap;
   width: 200vmin;
-}
-.row1 .notes {
+} */
+.row .notes {
   border-left: 6px solid #31376b;
   border-radius: 10px;
   background-color: #fff;
   box-sizing: border-box;
   display: flex;
-  height: 30vmin;
+  height: auto;
   justify-content: center;
   margin: 1vmin;
   padding: 3vmin;
-  width: 200vmin;
+  width: 100vmin;
 }
-.row1 .notes:nth-child(1) {
+.row .notes:nth-child(1) {
   background-color: rgba(243, 177, 55, 0.5);
 }
-.row1 .notes:nth-child(2) {
+.row .notes:nth-child(2) {
   background-color: rgba(54, 231, 47, 0.5);
 }
-.row1 .notes:nth-child(3) {
+.row .notes:nth-child(3) {
   background-color: rgba(228, 54, 205, 0.5);
 }
-.row1 .notes:nth-child(4) {
+.row .notes:nth-child(4) {
   background-color: rgba(39, 179, 248, 0.5);
 }
 /* fill styles */
