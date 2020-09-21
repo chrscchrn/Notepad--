@@ -40,34 +40,13 @@ a {
   color: #5073b8;
 }
 
-.notes {
-  margin-top: 20px;
-  padding: 20px 60px;
-  text-align: center;
-  --borderWidth: 3px;
-  background: rgb(255, 255, 249);
-  position: relative;
-  border-radius: 0px;
-  z-index: 1;
-  animation: developers 1000ms ease-in;
-}
-
-@keyframes developers{
-
-  0% {
-      transform: translateY(40%);
-  }
-  100% {
-      transform: translateX(0);
-  }
-}
-
 /* .row {
   display: flex;
   flex-wrap: wrap;
   width: 200vmin;
 } */
 .row .notes {
+  text-align: center;
   border-left: 6px solid #31376b;
   border-radius: 10px;
   background-color: #fff;
@@ -80,16 +59,16 @@ a {
   width: 100vmin;
 }
 .row .notes:nth-child(1) {
-  background-color: rgba(243, 177, 55, 0.5);
+  background-color: rgba(243, 177, 55, 0.4);
 }
 .row .notes:nth-child(2) {
-  background-color: rgba(54, 231, 47, 0.5);
+  background-color: rgba(54, 231, 47, 0.4);
 }
 .row .notes:nth-child(3) {
-  background-color: rgba(228, 54, 205, 0.5);
+  background-color: rgba(228, 54, 205, 0.4);
 }
 .row .notes:nth-child(4) {
-  background-color: rgba(39, 179, 248, 0.5);
+  background-color: rgba(39, 179, 248, 0.4);
 }
 /* fill styles */
 .fill-layer {

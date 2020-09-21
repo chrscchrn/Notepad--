@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/headerFont.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -29,17 +30,25 @@
 			</ul>
 		</div>
 	</nav>
-
-  <ul class="sidenav" id="mobile-demo">
-	  <div class="sidenav-bg">
-   		<li><a href="/notes">Notes</a></li>
-		<li><a href="/work">Work</a></li>
-		<li><a href="/search">Search</a></li>
-		<li><a href="/about">Developer info</a></li>
-		<li><a href="/logout">Logout</a></li>
+	
+ <div class="ulcontainer">
+  <ul class="sidenav fixed show-on-large-only" id="mobile-demo">
+	  <div  class="sidenav-bg col">
+		  <br>
+		  <br>
+		  <br>
+   		<li><a style="font-size: 3vh;" href="/notes">Notes <i class="material-icons" id="icons">note</i></a></li>
+		   <br>
+		<li><a style="font-size: 3vh;" href="/work">Work <i class="material-icons" id="icons">business_center</i></a></li>
+		<br>
+		<li><a style="font-size: 3vh;" href="/search">Search <i class="material-icons" id="icons">search</i></a></li>
+		<br>
+		<li><a style="font-size: 2.3vh;" href="/about">Developer info <i class="material-icons" id="icons">group</i></a></li>
+		<br>
+		<li class="log-out deep-orange accent-2"><a style="font-size: 3vh;" href="/logout">Logout <i class="material-icons" id="icons">exit_to_app</i></a></li>
 		</div>
   </ul>
-		
+	</div>	
 		{{{ body }}}
 		
 		<script>

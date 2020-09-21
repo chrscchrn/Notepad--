@@ -143,18 +143,40 @@ h3 {
 nav ul a {
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
-  font-size: 1rem;
+  font-size: 3rem;
   display: block;
   padding: 0 15px;
   cursor: pointer;
 }
 
 .sidenav-bg {
+  display: flex;
+  flex-direction: column;
   text-emphasis-color: white;
-  background-color: coral;
+  background-color: #ffab91;
   height: 100vh;
 }
-
 .subHeader {
   justify-content: space-evenly;
+}
+
+#container {
+  padding-left: 300px;
+}
+
+#content {
+  padding: 20px;
+}
+
+@media only screen and (max-width : 992px) {
+  #ulcontainer {
+    padding-left: 0px;
+  }
+}
+.log-out {
+ display: flex;
+ flex-direction: column;
+ bottom: 100px;
+ position: absolute;
+ 
 }

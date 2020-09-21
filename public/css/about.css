@@ -30,6 +30,7 @@ html {
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
+  animation: developers1 1000ms ease-in;
   /* height: auto; */
 }
 
@@ -38,15 +39,23 @@ html {
 }
 
 .card img {
+    border: 2px double transparent;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top right, rgba(255, 0, 0, 0.76),#2f20ffbe, rgba(128, 0, 128, 0.733),rgba(255, 166, 0, 0.836));
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
     display: flex;
     vertical-align: middle;
     height: auto ;
     width: 100% ;
     object-fit: contain;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
-@keyframes developers{
+@keyframes developers1{
     0% {
-        transform: translateY(200%);
+        transform: translateY(50%);
     }
     100% {
         transform: translateY(0);
@@ -75,5 +84,6 @@ a {
 .title {
   opacity: .7;
 }
-
-  
+.textP {
+  margin-bottom: 100px;
+}
