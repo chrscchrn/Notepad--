@@ -65,14 +65,14 @@ module.exports = (app) => {
     app.post("/api/work", (req, res) => {
         console.log(req.body);
         db.Note.create({
-            title: req.body.title,
+            noteTitle: req.body.noteTitle,
             body: req.body.body,
             url: req.body.url,
-            article: req.body.article,
-            source: req.body.article,
-            publishedAt: req.body.article,
-            author: req.body.article,
-            conent: req.body.article,
+            title: req.body.title,
+            source: req.body.source,
+            publishedAt: req.body.publishedAt,
+            author: req.body.author,
+            content: req.body.content,
             UserId: req.user.id
         }).then((dbWork) => {
             res.json(dbWork);
@@ -88,7 +88,7 @@ module.exports = (app) => {
 
     app.put("/api/work/update", (req, res) => {
         db.Note.update({
-            title: req.body.title,
+            noteTitle: req.body.noteTitle,
             body: req.body.body
         },
             {

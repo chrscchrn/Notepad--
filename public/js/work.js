@@ -9,8 +9,8 @@
     $("#loadAuthor").text(article.author); //
     $("#loadContent").text(article.content); //
     $("#loadURL").attr("href", article.url);
-    if (article.title) {
-        $("#noteTitle").text(article.title);
+    if (article.noteTitle) {
+        $("#noteTitle").text(article.noteTitle);
     }
     if (article.body) {
         $("#noteBody").text(article.body);
@@ -27,10 +27,10 @@
         return vars;
     }
 
-    var $title = $("#noteTitle");
+    var $noteTitle = $("#noteTitle");
     var $body = $("#noteBody");
     var $url = article.url;
-    var $article = article.title;
+    var $title = article.title;
     var $source = article.source.name;
     var $publishedAt = article.publishedAt;
     var $author = article.author;
@@ -44,10 +44,10 @@
     //checking if the current note has been created
     let isCreated; //variable scope FTW
     var noteCheck = {
-        title: $title.val().trim(),
+        noteTitle: $noteTitle.val().trim(),
         body: $body.val().trim(),
         url: $url,
-        article: $article
+        title: $title
     };
 
     //to edit needs to be in an if statement and find in sql
@@ -62,22 +62,22 @@
         console.log(isCreated);
         if (isCreated == false) {
             var note = {
-                title: $title.val().trim(),
+                noteTitle: $noteTitle.val().trim(),
                 body: $body.val().trim(),
                 url: $url,
-                article: $article,
+                title: $title,
                 source: $source,
                 publishedAt: $publishedAt,
                 author: $author,
-                conent: $content
+                content: $content
             };
             $.post("/api/work", note);
         } else {
             var noteUpdated = {
-                title: $title.val().trim(),
+                noteTitle: $noteTitle.val().trim(),
                 body: $body.val().trim(),
                 url: $url,
-                article: $article
+                title: $title
             };
             $.get("/api/work/update", noteUpdated)
                 .then(res => {
@@ -85,10 +85,10 @@
                     if (res) {
                         console.log(res, "good");
                         var note = {
-                            title: $title.val().trim(),
+                            noteTitle: $noteTitle.val().trim(),
                             body: $body.val().trim(),
                             url: $url,
-                            article: $article
+                            title: $title
                         };
                         $.ajax({
                             url: '/api/work/update',
