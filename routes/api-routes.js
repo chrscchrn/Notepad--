@@ -46,7 +46,7 @@ module.exports = (app) => {
         }
     });
 
-    app.get("/api/search", (req, res) => { //enter user keywork in q key
+    app.get("/api/search", (req, res) => { 
         if (!req.query.category) {
             axios.get(`http://newsapi.org/v2/top-headlines?country=us&language=en&category=technology&from=${fullDay}&sortBy=publishedAt&apiKey=${key}`)
                 .then(data => {
@@ -98,7 +98,7 @@ module.exports = (app) => {
             });
     });
 
-    app.delete("/api/work/", (req, res) => {
+    app.delete("/api/work/", (req) => {
         console.log(req.body.url)
 
         db.Note.destroy({
